@@ -1,0 +1,18 @@
+CREATE TABLE rooms (
+   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   system_name VARCHAR(255) NOT NULL,
+   type ENUM('basic', 'additional', 'special') NOT NULL,
+   computer BOOLEAN NOT NULL DEFAULT false
+);
+
+INSERT INTO rooms VALUES
+(1, 'archive_room', 'basic', 1),
+(2, 'cave_entrance_room', 'basic', 0),
+(3, 'cooling_system_room', 'basic', 1),
+(4, 'decon_room', 'basic', 0),
+(5, 'emergency_room', 'basic', 0),
+(6, 'laboratory_room', 'basic', 1),
+(7, 'cargo_a_room', 'basic', 0),
+(8, 'nest_room', 'basic', 0),
+(9, 'power_generator_room', 'basic', 0),
+(10, 'transmitter_control_room', 'basic', 1);
