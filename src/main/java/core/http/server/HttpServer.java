@@ -1,16 +1,25 @@
 package core.http.server;
 
-import database.MyHttpHandler;
+import core.http.server.controllers.RoomsController;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
 public class HttpServer {
+    static com.sun.net.httpserver.HttpServer server;
 
-
-    HttpServer() throws IOException {
-        com.sun.net.httpserver.HttpServer server = com.sun.net.httpserver.HttpServer.create(new InetSocketAddress("localhost", 8001), 0);
-        server.createContext("/test", new MyHttpHandler());
+    public static com.sun.net.httpserver.HttpServer getInstance() throws IOException {
+        if (server == null) {
+            server = com.sun.net.httpserver.HttpServer.create(new InetSocketAddress("localhost", 8001), 0);
+            handlerRoutes();
+        }
+        return server;
+    }
+    public void start() {
         server.start();
+    }
+
+    private static void handlerRoutes() {
+        server.createContext("/rooms", new RoomsController());
     }
 }

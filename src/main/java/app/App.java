@@ -1,21 +1,21 @@
 package app;
 
-import com.sun.net.httpserver.HttpServer;
-import database.MyHttpHandler;
-import database.MysqlCon;
+import core.database.DatabaseConnection;
+import core.http.server.HttpServer;
+import entities.room.Room;
+import services.dao.RoomDAO;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.sql.ResultSet;
+import java.util.HashSet;
 
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) throws IOException {
-
-
-        MysqlCon m = new MysqlCon();
-        m.run();
+        HttpServer.getInstance().start();
     }
 }
 

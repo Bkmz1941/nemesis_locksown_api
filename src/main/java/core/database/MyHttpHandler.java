@@ -1,4 +1,4 @@
-package database;
+package core.database;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -31,6 +31,7 @@ public class MyHttpHandler implements HttpHandler {
     private void handleResponse(HttpExchange httpExchange) throws IOException {
         OutputStream outputStream = httpExchange.getResponseBody();
         StringBuilder htmlBuilder = new StringBuilder();
+
 
         htmlBuilder.append("Hi Nemesis Lockdown");
 
