@@ -21,7 +21,7 @@ public class HttpServer {
 
     private static void handlerRoutes() {
         System.out.println(server.getAddress());
-        server.createContext("/resources/images/rooms", new HandlerResources());
-        server.createContext("/rooms", new RoomsController());
+        server.createContext("/resources", new HandlerResources());
+        server.createContext("/api/rooms", new RoomsController());
     }
 }

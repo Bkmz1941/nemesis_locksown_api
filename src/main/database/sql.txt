@@ -1,8 +1,9 @@
+/** rooms **/
 CREATE TABLE rooms (
-   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   system_name VARCHAR(255) NOT NULL,
-   type ENUM('basic', 'additional', 'special') NOT NULL,
-   computer BOOLEAN NOT NULL DEFAULT false
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255) NOT NULL,
+    type ENUM('basic', 'additional', 'special') NOT NULL,
+    computer BOOLEAN NOT NULL DEFAULT false
 );
 
 INSERT INTO rooms VALUES
@@ -16,3 +17,40 @@ INSERT INTO rooms VALUES
 (8, 'nest_room', 'basic', 0),
 (9, 'power_generator_room', 'basic', 0),
 (10, 'transmitter_control_room', 'basic', 1);
+
+ALTER TABLE rooms ADD description VARCHAR(255) NULL AFTER system_name;
+
+/** room_actions **/
+CREATE TABLE room_actions (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255) NOT NULL,
+    cost INT NOT NULL DEFAULT 2,
+    room_id INT,
+    FOREIGN KEY (room_id) REFERENCES rooms (id) ON DELETE CASCADE,
+    INDEX (room_id)
+);
+
+ALTER TABLE room_actions ADD conditional_text VARCHAR(255) NULL AFTER system_name;
+ALTER TABLE room_actions ADD hint VARCHAR(255) NULL AFTER conditional_text;
+ALTER TABLE room_actions DROP COLUMN conditional_text;
+ALTER TABLE room_actions DROP COLUMN hint;
+ALTER TABLE rooms DROP COLUMN rooms;
+
+INSERT INTO room_actions VALUES
+(1, 'examine_the_archives', 2, 1),
+(2, 'move_through_technical_corridors', 2, 2),
+(3, 'initiate_auto_destruction_sequence', 2, 3),
+(4, 'perform_decontamination_procedure', 2, 4),
+(5, 'treat_your_wounds', 2, 5),
+(6, 'analyze_object', 2, 6),
+(7, 'enter_css_pod', 2, 7),
+(8, 'take_egg', 2, 8),
+(9, 'stop_auto_destruction_sequence', 2, 9),
+(10, 'power_a_section', 2, 9),
+(11, 'send_a_signal', 2, 10),
+(12, 'check_an_objective', 2, 10);
+
+SELECT * FROM rooms r LEFT JOIN room_actions ra ON r.id = ra.room_id;
+
+
+

@@ -1,0 +1,12 @@
+{
+  "archive_room": "Архивы",
+  "cave_entrance_room": "Вход в технические помещения",
+  "cooling_system_room": "Комната охлаждения реактора",
+  "decon_room": "Комната для дизенфекции",
+  "emergency_room": "Комната скорой помощи",
+  "laboratory_room": "Лаборатория",
+  "cargo_a_room": "Грузовая комната",
+  "nest_room": "Гнездо",
+  "power_generator_room": "Генераторная",
+  "transmitter_control_room": "Комната связи"
+}

@@ -4,14 +4,17 @@ import com.google.gson.Gson;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import com.sun.source.tree.Tree;
+import core.http.resources.RoomResource;
 import entities.room.Room;
-import org.apache.commons.lang3.StringEscapeUtils;
+import entities.room.RoomAction;
 import services.dao.RoomDAO;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.HashSet;
+import java.util.Comparator;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class RoomsController implements HttpHandler {
     @Override
@@ -28,7 +31,14 @@ public class RoomsController implements HttpHandler {
     }
 
     private String index() throws IOException {
-        return new Gson().toJson(RoomDAO.getAll());
+        SortedSet<Room> rooms = RoomDAO.getAll();
+        SortedSet<RoomResource> roomResources = new TreeSet<>(Comparator.comparingInt(RoomResource::getId));
+
+        for (Room room: rooms) {
+            roomResources.add(new RoomResource(room));
+        }
+
+        return new Gson().toJson(roomResources);
     }
 
     private void sendResponse(HttpExchange exchange, String response) throws IOException {
