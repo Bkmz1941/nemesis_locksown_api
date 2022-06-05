@@ -20,6 +20,8 @@ public class HttpServer {
     }
 
     private static void handlerRoutes() {
+        System.out.println(server.getAddress());
+        server.createContext("/resources/images/rooms", new HandlerResources());
         server.createContext("/rooms", new RoomsController());
     }
 }

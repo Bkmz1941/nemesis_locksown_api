@@ -5,8 +5,8 @@ import java.sql.*;
 public class DatabaseConnection {
     private final String host = "localhost";
     private final String port = "3306";
-    private final String user = "root";
-    private final String password = "7wiD*FGP%gUt68#2NGyy*";
+    private final String user = "nemesis";
+    private final String password = "JSF*gAeXfwye#*0T";
     private final String database = "nemesis_lockdown";
     private final String url;
     private static DatabaseConnection instance;
