@@ -1,0 +1,14 @@
+{
+  "examine_the_archives": "Изучить архивы",
+  "move_through_technical_corridors": "Войти в технический коридор",
+  "initiate_auto_destruction_sequence": "Отключить охлаждение реактора",
+  "perform_decontamination_procedure": "Пройти процедуру дезактивации",
+  "treat_your_wounds": "Оказать медицинскую помощь",
+  "analyze_object": "Изучить объект",
+  "enter_css_pod": "Войти в CCS модуль",
+  "take_egg": "Взять яйцо",
+  "stop_auto_destruction_sequence": "Включить охлаждение реактора",
+  "power_a_section": "Включить питание на уровне",
+  "send_a_signal": "Отправить сигнал SOS",
+  "check_an_objective": "Узнать задачи персонала"
+}

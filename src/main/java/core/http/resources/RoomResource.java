@@ -12,13 +12,15 @@ public class RoomResource {
     private final RoomType type;
     private final String name;
     private final Boolean computer;
-    private TreeSet<RoomAction> actions = new TreeSet<>(Comparator.comparingInt(RoomAction::getId));
+    private TreeSet<RoomActionResource> actions = new TreeSet<>(Comparator.comparingInt(RoomActionResource::getId));
 
     public RoomResource(Room room) {
         this.id = room.getId();
         this.type = room.getType();
         this.computer = room.getComputer();
-        this.actions = room.getActions();
+        for (RoomAction ra: room.getActions()) {
+            this.actions.add(new RoomActionResource(ra));
+        }
         this.name = room.getName();
     }
 
@@ -34,7 +36,7 @@ public class RoomResource {
         return type;
     }
 
-    public TreeSet<RoomAction> getActions() {
+    public TreeSet<RoomActionResource> getActions() {
         return actions;
     }
 }

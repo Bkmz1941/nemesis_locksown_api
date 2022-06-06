@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import helpers.FileHelper;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -14,30 +15,6 @@ import java.util.List;
 
 public class HandlerResources implements HttpHandler {
 
-    public static File streamToFile(InputStream in) {
-        if (in == null) {
-            return null;
-        }
-
-        try {
-            File f = File.createTempFile(String.valueOf(in.hashCode()), ".tmp");
-            f.deleteOnExit();
-
-            FileOutputStream out = new FileOutputStream(f);
-            byte[] buffer = new byte[1024];
-
-            int bytesRead;
-            while ((bytesRead = in.read(buffer)) != -1) {
-                out.write(buffer, 0, bytesRead);
-            }
-
-            return f;
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-        return null;
-    }
-
     @Override
     public void handle(HttpExchange exchange) throws IOException {
         try {
@@ -45,7 +22,7 @@ public class HandlerResources implements HttpHandler {
             String[] arrOfStr = uri.split("/resources");
             String resource = arrOfStr[1];
 
-            File file = streamToFile(getClass().getResourceAsStream(resource));
+            File file = FileHelper.streamToFile(getClass().getResourceAsStream(resource));
             if (file == null) {
                 final Headers headers = exchange.getResponseHeaders();
                 headers.set("Content-Type", "application/json");

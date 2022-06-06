@@ -1,6 +1,7 @@
 package entities.room;
 
 import com.google.gson.Gson;
+import helpers.FileHelper;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -22,34 +23,10 @@ public class Room {
         this.computer = computer;
     }
 
-    public static File streamToFile(InputStream in) {
-        if (in == null) {
-            return null;
-        }
-
-        try {
-            File f = File.createTempFile(String.valueOf(in.hashCode()), ".tmp");
-            f.deleteOnExit();
-
-            FileOutputStream out = new FileOutputStream(f);
-            byte[] buffer = new byte[1024];
-
-            int bytesRead;
-            while ((bytesRead = in.read(buffer)) != -1) {
-                out.write(buffer, 0, bytesRead);
-            }
-
-            return f;
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-        return null;
-    }
-
     public String getName() {
         HashMap<String, String> map = new HashMap<>();
         try {
-            File file = streamToFile(getClass().getResourceAsStream("/translate/ru/rooms.json"));
+            File file = FileHelper.streamToFile(getClass().getResourceAsStream("/translate/ru/rooms.json"));
             assert file != null;
             String jsonString = new String(Files.readAllBytes(file.toPath()));
             map = new Gson().fromJson(jsonString, HashMap.class);
