@@ -18,9 +18,9 @@ public class RoomResource {
         this.id = room.getId();
         this.type = room.getType();
         this.computer = room.getComputer();
-        for (RoomAction ra: room.getActions()) {
-            this.actions.add(new RoomActionResource(ra));
-        }
+//        for (RoomAction ra: room.getActions()) {
+//            this.actions.add(new RoomActionResource(ra));
+//        }
         this.name = room.getName();
     }
 

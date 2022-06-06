@@ -24,16 +24,21 @@ public class Room {
     }
 
     public String getName() {
-        HashMap<String, String> map = new HashMap<>();
+        HashMap<String, Object> map = new HashMap<>();
+        HashMap<String, Object> map2 = new HashMap<>();
         try {
             File file = FileHelper.streamToFile(getClass().getResourceAsStream("/translate/ru/rooms.json"));
             assert file != null;
             String jsonString = new String(Files.readAllBytes(file.toPath()));
             map = new Gson().fromJson(jsonString, HashMap.class);
+            map2 = new Gson().fromJson((String) map.get("emergency_room"), HashMap.class);
+//            map = new Gson().fromJson(map.get("emergency_room"), HashMap.class);
+            System.out.println(jsonString);
+            System.out.println(map2);
         } catch (Exception e) {
             System.out.println(e);
         }
-        return map.get(this.systemName);
+        return "";
     }
 
     public int getId() {

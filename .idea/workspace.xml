@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf99375f-0634-4db5-ba52-b0683a012b8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/core/http/server/HandlerResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/start.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/database/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/server/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/RoomResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/RoomResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/room/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/translate/ru/rooms.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translate/ru/rooms.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +52,23 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.NemesisLockdown [clean,compile...]">
+  <component name="RunManager" selected="JUnit.AppTest.shouldAnswerWithTrue">
+    <configuration name="AppTest.shouldAnswerWithTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NemesisLockdown" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.AppTest" />
+      <option name="METHOD_NAME" value="shouldAnswerWithTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NemesisLockdown [clean,compile...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -83,7 +96,7 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
-    <configuration name="Unnamed" type="ShConfigurationType">
+    <configuration name="Start" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="java -tar " />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
       <option name="SCRIPT_PATH" value="" />
@@ -99,9 +112,15 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
       <item itemvalue="Maven.NemesisLockdown [clean,compile...]" />
-      <item itemvalue="Shell Script.Unnamed" />
+      <item itemvalue="Shell Script.Start" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

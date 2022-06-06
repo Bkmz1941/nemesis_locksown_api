@@ -1,12 +1,32 @@
 {
-  "archive_room": "Архивы",
-  "cave_entrance_room": "Комната технического обслуживания",
-  "cooling_system_room": "Комната охлаждения реактора",
-  "decon_room": "Комната для дизактивации",
-  "emergency_room": "Комната скорой помощи",
-  "laboratory_room": "Лаборатория",
-  "cargo_a_room": "CARGO 'A'",
-  "nest_room": "Зараженная комната",
-  "power_generator_room": "Генераторная",
-  "transmitter_control_room": "Командный пункт"
+  "archive_room": {
+    "name": "Архивы"
+  },
+  "cave_entrance_room": {
+    "name": "Комната технического обслуживания"
+  },
+  "cooling_system_room": {
+    "name": "Комната охлаждения реактора"
+  },
+  "decon_room": {
+    "name": "Комната для дизактивации"
+  },
+  "emergency_room": {
+    "name": "Комната скорой помощи"
+  },
+  "laboratory_room": {
+    "name": "Лаборатория"
+  },
+  "cargo_a_room": {
+    "name": "CARGO 'A'"
+  },
+  "nest_room": {
+    "name": "Зараженная комната"
+  },
+  "power_generator_room": {
+    "name": "Генераторная"
+  },
+  "transmitter_control_room": {
+    "name": "Командный пункт"
+  }
 }
