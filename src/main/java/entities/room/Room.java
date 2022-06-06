@@ -1,12 +1,12 @@
 package entities.room;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import helpers.FileHelper;
+import helpers.FileWithTranslate;
 
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class Room {
@@ -24,21 +24,10 @@ public class Room {
     }
 
     public String getName() {
-        HashMap<String, Object> map = new HashMap<>();
-        HashMap<String, Object> map2 = new HashMap<>();
-        try {
-            File file = FileHelper.streamToFile(getClass().getResourceAsStream("/translate/ru/rooms.json"));
-            assert file != null;
-            String jsonString = new String(Files.readAllBytes(file.toPath()));
-            map = new Gson().fromJson(jsonString, HashMap.class);
-            map2 = new Gson().fromJson((String) map.get("emergency_room"), HashMap.class);
-//            map = new Gson().fromJson(map.get("emergency_room"), HashMap.class);
-            System.out.println(jsonString);
-            System.out.println(map2);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        return "";
+        return FileWithTranslate.getKey("ru", "rooms", this.systemName, "name");
+    }
+    public String getDescription() {
+        return FileWithTranslate.getKey("ru", "rooms", this.systemName, "description");
     }
 
     public int getId() {

@@ -11,6 +11,7 @@ public class RoomResource {
     private final int id;
     private final RoomType type;
     private final String name;
+    private final String description;
     private final Boolean computer;
     private TreeSet<RoomActionResource> actions = new TreeSet<>(Comparator.comparingInt(RoomActionResource::getId));
 
@@ -18,10 +19,11 @@ public class RoomResource {
         this.id = room.getId();
         this.type = room.getType();
         this.computer = room.getComputer();
-//        for (RoomAction ra: room.getActions()) {
-//            this.actions.add(new RoomActionResource(ra));
-//        }
+        for (RoomAction ra: room.getActions()) {
+            this.actions.add(new RoomActionResource(ra));
+        }
         this.name = room.getName();
+        this.description = room.getDescription();
     }
 
     public int getId() {

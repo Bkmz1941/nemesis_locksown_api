@@ -2,6 +2,7 @@ package entities.room;
 
 import com.google.gson.Gson;
 import helpers.FileHelper;
+import helpers.FileWithTranslate;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -19,16 +20,19 @@ public class RoomAction {
     }
 
     public String getName() {
-        HashMap<String, String> map = new HashMap<>();
-        try {
-            File file = FileHelper.streamToFile(getClass().getResourceAsStream("/translate/ru/room_actions.json"));
-            assert file != null;
-            String jsonString = new String(Files.readAllBytes(file.toPath()));
-            map = new Gson().fromJson(jsonString, HashMap.class);
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-        return map.get(this.systemName);
+        return FileWithTranslate.getKey("ru", "room_actions", this.systemName, "name");
+    }
+
+    public String getDescription() {
+        return FileWithTranslate.getKey("ru", "room_actions", this.systemName, "description");
+    }
+
+    public String getHints() {
+        return FileWithTranslate.getKey("ru", "room_actions", this.systemName, "hints");
+    }
+
+    public String getConditions() {
+        return FileWithTranslate.getKey("ru", "room_actions", this.systemName, "conditions");
     }
 
     public int getId() {

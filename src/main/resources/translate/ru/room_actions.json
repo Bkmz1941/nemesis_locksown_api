@@ -1,14 +1,74 @@
 {
-  "examine_the_archives": "Изучить архивы",
-  "move_through_technical_corridors": "Войти в технический коридор",
-  "initiate_auto_destruction_sequence": "Отключить охлаждение реактора",
-  "perform_decontamination_procedure": "Пройти процедуру дезактивации",
-  "treat_your_wounds": "Оказать медицинскую помощь",
-  "analyze_object": "Изучить объект",
-  "enter_css_pod": "Войти в CCS модуль",
-  "take_egg": "Взять яйцо",
-  "stop_auto_destruction_sequence": "Включить охлаждение реактора",
-  "power_a_section": "Включить питание на уровне",
-  "send_a_signal": "Отправить сигнал SOS",
-  "check_an_objective": "Узнать задачи персонала"
+  "examine_the_archives": {
+    "name": "Изучить архивы",
+    "description": "Gain 2 Knowledge and flip your Knowledge token to the active side. Then, peek at any Contingency token (even outside of your Section)",
+    "conditions": "You may perform this Action only if your Knowledge token is inactive",
+    "hints": "Important: Remember you can never peek at the Active Contingency token"
+  },
+  "move_through_technical_corridors": {
+    "name": "Войти в технический коридор",
+    "description": "You may move to a  chosen explored Room with a Technical Corridors Entrance. Draw and resolve an Attack card (treat it as an Attack from an Adult Intruder in Darkness).",
+    "conditions": "",
+    "hints": ""
+  },
+  "initiate_auto_destruction_sequence": {
+    "name": "Отключить охлаждение реактора",
+    "description": "Take the Auto destruction token and place it 3 slots forward on the Time track (there should be 2 empty slots between the Time token and Auto destruction token). Place it with the yellow side up",
+    "conditions": "",
+    "hints": "Note: As long as the yellow side of the Auto destruction token is visible, players may stop the sequence in the Power Generator."
+  },
+  "perform_decontamination_procedure": {
+    "name": "Пройти процедуру дезактивации",
+    "description": "Scan all Contamination cards in your hand. Remove all INFECTED cards. If you have a Larva on your Character board, remove it. If you have a  Slime marker on your Character Board, discard it.",
+    "conditions": "",
+    "hints": ""
+  },
+  "treat_your_wounds": {
+    "name": "Оказать медицинскую помощь",
+    "description": "Dress all your Serious Wounds OR Heal 1 of your Dressed Serious Wounds OR Heal all your Light Wounds",
+    "conditions": "",
+    "hints": ""
+  },
+  "analyze_object": {
+    "name": "Изучить объект",
+    "description": "Gain 3 Knowledge. The Object is placed in the first empty slot on the Laboratory board after Research. Then, the Intruder Weakness card below the Object is discovered. If the Object was previously used to discover a Weakness, discard it instead of placing it on the Laboratory board.",
+    "conditions": "This Action may only be performed if one of the following Objects is in the Room (for example carried by the Character): Intruder Carcass, Character Corpse or Egg",
+    "hints": ""
+  },
+  "enter_css_pod": {
+    "name": "Войти в CCS модуль",
+    "description": "After Entering, you discard all cards and automatically pass. Place your Character in the corresponding CSS Pod space on the board. In the Event phase, your Character will have a chance to escape using this CSS Pod. Characters in the CSS Pod space are unaffected by any game effects unless specified otherwise. If your Character does not manage to escape using the CSS Pod, they suffer 1 Serious Wound",
+    "conditions": "You may only use this Action if the Time token is in the same slot as any of the CSS tokens, and the CSS Pod space “A” is empty.",
+    "hints": ""
+  },
+  "take_egg": {
+    "name": "Взять яйцо",
+    "description": "",
+    "conditions": "Take 1 Egg token from the Intruder board. After that, perform a Noise roll.",
+    "hints": "The Egg tokens placed on the Laboratory board represent the Eggs in the Nest. When you take (or destroy) Eggs \nfrom the Nest, take them from the Laboratory board. When there are no more Eggs in the Nest (they have all been carried away or destroyed), the Nest is considered destroyed – place 1 Injury marker in the Nest to represent this. If there is a Fire marker in a Room containing uncarried Eggs, destroy 1 uncarried Egg during the Fire Damage step of the Event Phase"
+  },
+  "stop_auto_destruction_sequence": {
+    "name": "Включить охлаждение реактора",
+    "description": "If there is the Auto destruction token with yellow side up on the Time track, discard it.",
+    "conditions": "",
+    "hints": ""
+  },
+  "power_a_section": {
+    "name": "Включить питание на уровне",
+    "description": "Flip the Power token of the Section you are in. This can be used to get more Power even if the Power was not restored (i.e. the Time token is on the inactive side)",
+    "conditions": "",
+    "hints": ""
+  },
+  "send_a_signal": {
+    "name": "Отправить сигнал SOS",
+    "description": "Place a Status marker on the Signal space on your Character board",
+    "conditions": "",
+    "hints": ""
+  },
+  "check_an_objective": {
+    "name": "Узнать задачи персонала",
+    "description": "Choose a  Character with a  Status marker on the Signal space on their Character board. They have to show you their Objective in secret",
+    "conditions": "",
+    "hints": ""
+  }
 }
