@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf99375f-0634-4db5-ba52-b0683a012b8d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/RoomResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/RoomResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/room/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/translate/ru/rooms.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translate/ru/rooms.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/translate/ru/room_actions.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translate/ru/room_actions.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.shouldAnswerWithTrue">
+  <component name="RunManager" selected="Maven.NemesisLockdown [clean,compile...]">
     <configuration name="AppTest.shouldAnswerWithTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NemesisLockdown" />
       <extension name="coverage">

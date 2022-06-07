@@ -1,38 +1,38 @@
 {
   "examine_the_archives": {
     "name": "Изучить архивы",
-    "description": "Gain 2 Knowledge and flip your Knowledge token to the active side. Then, peek at any Contingency token (even outside of your Section)",
-    "conditions": "You may perform this Action only if your Knowledge token is inactive",
-    "hints": "Important: Remember you can never peek at the Active Contingency token"
+    "description": "Получите 2 Знания и переверните ваш жетон Знаний активной стороной вверх. Затем посмотрите любой жетон Непредвиденных обстоятельств (даже не в своей Секции)",
+    "conditions": "Вы можете выполнить это действие только если ваш жетон Знаний неактивен",
+    "hints": "Важно: Помните, вы никогда не можете посмотреть Активный жетон Непредвиденных обстоятельств"
   },
   "move_through_technical_corridors": {
     "name": "Войти в технический коридор",
-    "description": "You may move to a  chosen explored Room with a Technical Corridors Entrance. Draw and resolve an Attack card (treat it as an Attack from an Adult Intruder in Darkness).",
+    "description": "Вы можете переместиться в любую Комнату со входом в Технический коридор. Возьмите и разыграйте карту Атаки (это атака Взрослого в темноте)",
     "conditions": "",
     "hints": ""
   },
   "initiate_auto_destruction_sequence": {
     "name": "Отключить охлаждение реактора",
-    "description": "Take the Auto destruction token and place it 3 slots forward on the Time track (there should be 2 empty slots between the Time token and Auto destruction token). Place it with the yellow side up",
+    "description": "Возьмите жетон Автоуничтожения и положите его на 3 деление желтой стороной вверх на Трек времени. (Должно остаться 2 пустых слота между Жетоном времени и жетоном Самоуничтожения)",
     "conditions": "",
-    "hints": "Note: As long as the yellow side of the Auto destruction token is visible, players may stop the sequence in the Power Generator."
+    "hints": "Заметьте: до тех пор, пока жетон Самоуничтожения размещен желктой стороной вверх, можно остановить процесс Самоуничтожения"
   },
   "perform_decontamination_procedure": {
     "name": "Пройти процедуру дезактивации",
-    "description": "Scan all Contamination cards in your hand. Remove all INFECTED cards. If you have a Larva on your Character board, remove it. If you have a  Slime marker on your Character Board, discard it.",
+    "description": "Просканируйте все Карты заражения в вашей руке. Удалите все Инфецированные карты. Если вы имеет Личинку в персонаже, удалите ее. Если вы имеет маркер Слизи на персонаже, сбросьте его",
     "conditions": "",
     "hints": ""
   },
   "treat_your_wounds": {
     "name": "Оказать медицинскую помощь",
-    "description": "Dress all your Serious Wounds OR Heal 1 of your Dressed Serious Wounds OR Heal all your Light Wounds",
+    "description": "Закройте все ваши Серьезные раны или Вылечите 1 Закрытую рану или Вылечите все ваши Легкие раны",
     "conditions": "",
     "hints": ""
   },
   "analyze_object": {
     "name": "Изучить объект",
-    "description": "Gain 3 Knowledge. The Object is placed in the first empty slot on the Laboratory board after Research. Then, the Intruder Weakness card below the Object is discovered. If the Object was previously used to discover a Weakness, discard it instead of placing it on the Laboratory board.",
-    "conditions": "This Action may only be performed if one of the following Objects is in the Room (for example carried by the Character): Intruder Carcass, Character Corpse or Egg",
+    "description": "Получите 3 Знания. После Исследования разместите Объект в первую вободную область на доске Лаборатория. Затем вскройте карту Уязвимостей чужого под этой областью. Если такой Объект уже был исследован ранее для обнаружения Уязвимости чужого, то сбросьте жетон исследованного Объекта",
+    "conditions": "Это Действие можно выполнить, только если один из Объектов (Труп персонажа, Труп пришельца или Яйцо) находится в отсеке (например, он есть в области Рук персонажа или его принес другой персонаж и оставил в этой комнате)",
     "hints": ""
   },
   "enter_css_pod": {
