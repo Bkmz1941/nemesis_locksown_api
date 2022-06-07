@@ -37,38 +37,38 @@
   },
   "enter_css_pod": {
     "name": "Войти в CCS модуль",
-    "description": "After Entering, you discard all cards and automatically pass. Place your Character in the corresponding CSS Pod space on the board. In the Event phase, your Character will have a chance to escape using this CSS Pod. Characters in the CSS Pod space are unaffected by any game effects unless specified otherwise. If your Character does not manage to escape using the CSS Pod, they suffer 1 Serious Wound",
-    "conditions": "You may only use this Action if the Time token is in the same slot as any of the CSS tokens, and the CSS Pod space “A” is empty.",
+    "description": "После посадки Персонажа в контейнер СОГ игрок должен сбросить все свои карты и спасовать (разыграв все соответствующие эффекты). Затем поместите фигурку Персонажа на область игрового поля с соответствующим контейнером СОГ. В Фазе Событийваш Персонаж попытается эвакуироваться с помощью этого контейнера СОГ. На Персонажей в контейнерах СОГ не влияют никакие игровые эффекты, если не указаноиное. Персонажи, которым не удалось эвакуироваться, возвращаются в отсеки соответствующих секций СОГ и получают 1 Тяжелую Рану",
+    "conditions": "Вы можете выполнить это Действие, только если жетон Времени находиться на делении трека Времени, отмеченного любым жетоном СОГ, а в области игрового поляс контейнером СОГ «А» нет других Персонажей",
     "hints": ""
   },
   "take_egg": {
     "name": "Взять яйцо",
-    "description": "",
-    "conditions": "Take 1 Egg token from the Intruder board. After that, perform a Noise roll.",
-    "hints": "The Egg tokens placed on the Laboratory board represent the Eggs in the Nest. When you take (or destroy) Eggs \nfrom the Nest, take them from the Laboratory board. When there are no more Eggs in the Nest (they have all been carried away or destroyed), the Nest is considered destroyed – place 1 Injury marker in the Nest to represent this. If there is a Fire marker in a Room containing uncarried Eggs, destroy 1 uncarried Egg during the Fire Damage step of the Event Phase"
+    "description": "Возьмите 1 жетон Яйца Пришельцев с планшета Лаборатории. После этого выполните Бросок на Шум. Жетоны Яиц Пришельцев, размещенные на планшете Лаборатории представляют собой Яйца Пришельцев в Гнезде. Когда вы берете (или уничтожаете) Яйца Пришельцев из Гнезда, берите их жетоны с планшета Лаборатории. Если в Гнезде нет Яиц Пришельцев (если их все вынесли или уничтожили), Гнездо считается уничтоженным — поместите 1 жетон Травмы на Гнездо чтобы обозначить это. Если в любом отсеке, где есть Яйца Пришельцев, случается Пожар, то во время шага Травмы от Пожара в Фазе Событий уничтожьте 1 Яйцо Пришельцев, которое не находится в руках у Персонажей",
+    "conditions": "",
+    "hints": "Жетон Неисправности никогда не может быть размещен в Гнезде. Примечание: Помните, что Яйцо Пришельцев — это Тяжелый Объект.Примечание: Вы не можете выполнять любые Действия Поиска в этом отсеке"
   },
   "stop_auto_destruction_sequence": {
     "name": "Включить охлаждение реактора",
-    "description": "If there is the Auto destruction token with yellow side up on the Time track, discard it.",
+    "description": "Уберите с трека Времени жетон Самоуничтожения, размещенный желтой стороной вверх",
     "conditions": "",
     "hints": ""
   },
   "power_a_section": {
     "name": "Включить питание на уровне",
-    "description": "Flip the Power token of the Section you are in. This can be used to get more Power even if the Power was not restored (i.e. the Time token is on the inactive side)",
+    "description": "Переверните жетон Энергии того Уровня, на котором находится Персонаж. Это Действие можно использовать, даже если подача Энергии еще не была восстановлена (то есть если жетон Времени все еще расположен неактивной стороной вверх)",
     "conditions": "",
     "hints": ""
   },
   "send_a_signal": {
     "name": "Отправить сигнал SOS",
-    "description": "Place a Status marker on the Signal space on your Character board",
+    "description": "Поместите жетон Состояния на область «Сигнал» на планшете Персонажа",
     "conditions": "",
-    "hints": ""
+    "hints": "Примечание: Отправка Сигнала является обязательным условием для достижения некоторых Целей и соблюдения требований одного из жетонов Кодов реагирования"
   },
   "check_an_objective": {
     "name": "Узнать задачи персонала",
-    "description": "Choose a  Character with a  Status marker on the Signal space on their Character board. They have to show you their Objective in secret",
+    "description": "Выберите Персонажа с жетоном Состояния на области «Сигнал» на его планшете. Он должен втайне показать вам свои карты Целей",
     "conditions": "",
-    "hints": ""
+    "hints": "Примечание: Если у выбранного игрока больше одной карты Целей, то он должен показать вам их все"
   }
 }

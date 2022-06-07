@@ -1,4 +1,4 @@
-/** rooms **/
+/** ROOMS **/
 CREATE TABLE rooms (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     system_name VARCHAR(255) NOT NULL,
@@ -20,7 +20,7 @@ INSERT INTO rooms VALUES
 
 ALTER TABLE rooms ADD description VARCHAR(255) NULL AFTER system_name;
 
-/** room_actions **/
+/** ROOM_ACTIONS **/
 CREATE TABLE room_actions (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     system_name VARCHAR(255) NOT NULL,
@@ -45,12 +45,53 @@ INSERT INTO room_actions VALUES
 (6, 'analyze_object', 2, 6),
 (7, 'enter_css_pod', 2, 7),
 (8, 'take_egg', 2, 8),
+(12, 'try_to_destroy_egg', 2, 8),
 (9, 'stop_auto_destruction_sequence', 2, 9),
 (10, 'power_a_section', 2, 9),
 (11, 'send_a_signal', 2, 10),
 (12, 'check_an_objective', 2, 10);
 
+INSERT INTO room_actions VALUES (13, 'try_to_destroy_egg', 2, 8);
+DELETE FROM room_actions WHERE id=13;
+
 SELECT * FROM rooms r LEFT JOIN room_actions ra ON r.id = ra.room_id;
 
+/** CHARACTERS **/
+CREATE TABLE characters (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255) NOT NULL,
+    color ENUM('violet', 'blue', 'green', 'red', 'orange', 'white') NOT NULL
+);
+INSERT INTO characters VALUES
+(1, 'sentry', 'blue'),
+(2, 'lab_rat', 'violet'),
+(3, 'hacker', 'green'),
+(4, 'xenobiologist', 'white'),
+(5, 'janitor', 'orange'),
+(6, 'survivor', 'red');
 
+CREATE TABLE character_base_actions (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255) NOT NULL,
+    in_combat BOOLEAN NULL DEFAULT NULL,
+    cost INT NOT NULL DEFAULT 1
+);
 
+ALTER TABLE character_base_actions MODIFY in_combat BOOLEAN NULL DEFAULT NULL;
+ALTER TABLE character_base_actions ADD character_id INT;
+ALTER TABLE character_base_actions ADD FOREIGN KEY (character_id) REFERENCES characters (id);
+ALTER TABLE character_base_actions ADD INDEX (character_id);
+ALTER TABLE character_base_actions DROP COLUMN character_id;
+
+INSERT INTO character_base_actions VALUES
+(1, 'movement', null, 1),
+(2, 'shoot', 1, 1),
+(3, 'melee_attack', 1, 1),
+(4, 'pick_up_heavy_object', 0, 1),
+(5, 'trade', 0, 1),
+(6, 'craft_item', 0, 1),
+(7, 'careful_movement', 0, 2),
+
+SHOW CREATE TABLE character_base_actions;
+ALTER TABLE character_base_actions DROP FOREIGN KEY character_base_actions_ibfk_1;
+ALTER TABLE character_base_actions DROP character_id;
