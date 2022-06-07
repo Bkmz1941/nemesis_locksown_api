@@ -19,6 +19,8 @@ INSERT INTO rooms VALUES
 (10, 'transmitter_control_room', 'basic', 1);
 
 ALTER TABLE rooms ADD description VARCHAR(255) NULL AFTER system_name;
+ALTER TABLE rooms MODIFY type ENUM('technical', 'medical', 'armory', 'multi', 'unknown') NOT NULL;
+ALTER TABLE character_base_actions MODIFY in_combat BOOLEAN NULL DEFAULT NULL;
 
 /** ROOM_ACTIONS **/
 CREATE TABLE room_actions (

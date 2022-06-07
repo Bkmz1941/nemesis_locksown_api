@@ -1,15 +1,17 @@
 package entities.charcater;
 
+import core.http.server.HttpServer;
+
+import java.io.IOException;
+
 public class Character {
     private final int id;
     private final String systemName;
-    private final String image;
     private final CharacterColor color;
 
     public Character(int id, String systemName, String color) {
         this.id = id;
         this.systemName = systemName;
-        this.image = "";
         this.color = detectCharacterColor(color);
     }
 
@@ -23,6 +25,10 @@ public class Character {
 
     public CharacterColor getColor() {
         return color;
+    }
+
+    public String getImageFullImageLink() throws IOException {
+        return HttpServer.port + ":/" + HttpServer.getInstance().getAddress() + "/resources/images/characters/" + this.systemName + ".png";
     }
 
     private CharacterColor detectCharacterColor(String type) {

@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
+import core.http.resources.CharacterResource;
 import core.http.resources.RoomResource;
 import entities.charcater.Character;
 import entities.room.Room;
@@ -32,13 +33,13 @@ public class CharacterController implements HttpHandler {
 
     private String index() throws IOException {
         SortedSet<Character> characters = CharacterDAO.getAll();
-//        SortedSet<RoomResource> roomResources = new TreeSet<>(Comparator.comparingInt(RoomResource::getId));
+        SortedSet<CharacterResource> characterResource = new TreeSet<>(Comparator.comparingInt(CharacterResource::getId));
 
-//        for (Room room: rooms) {
-//            roomResources.add(new RoomResource(room));
-//        }
+        for (Character character: characters) {
+            characterResource.add(new CharacterResource(character));
+        }
 
-        return new Gson().toJson(characters);
+        return new Gson().toJson(characterResource);
     }
 
     private void sendResponse(HttpExchange exchange, String response) throws IOException {

@@ -1,0 +1,10 @@
+{
+  "car": {
+    "speed_limit": 9223372036854775806,
+    "weh_count": 4
+  },
+  "horse": {
+    "weight": 10000,
+    "name": null
+  }
+}

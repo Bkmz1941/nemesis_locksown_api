@@ -1,7 +1,9 @@
 package entities.room;
 
 public enum RoomType {
-    BASIC,
-    ADDITIONAL,
-    SPECIAL
+    TECHNICAL,
+    MEDICAL,
+    ARMORY,
+    MULTI,
+    UNKNOWN
 }

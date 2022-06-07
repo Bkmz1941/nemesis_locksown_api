@@ -8,11 +8,16 @@ import java.net.InetSocketAddress;
 
 public class HttpServer {
     static com.sun.net.httpserver.HttpServer server;
+    public static final String port = "http";
 
     public static com.sun.net.httpserver.HttpServer getInstance() throws IOException {
-        if (server == null) {
-            server = com.sun.net.httpserver.HttpServer.create(new InetSocketAddress("localhost", 8001), 0);
-            handlerRoutes();
+        try {
+            if (server == null) {
+                server = com.sun.net.httpserver.HttpServer.create(new InetSocketAddress("localhost", 8001), 0);
+                handlerRoutes();
+            }
+        } catch (Exception e) {
+            System.out.println(e);
         }
         return server;
     }

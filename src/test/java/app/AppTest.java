@@ -19,7 +19,7 @@ public class AppTest
      */
     @Test
     public void shouldAnswerWithTrue() throws IOException {
-        Room room = new Room(1, "archive_room", "basic", false);
+        Room room = new Room(1, "archive_room", "basic", "basic",false);
         System.out.println(room.getName());
 
         assertTrue( true );
