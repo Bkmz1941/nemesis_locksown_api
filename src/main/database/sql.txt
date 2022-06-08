@@ -84,6 +84,8 @@ ALTER TABLE character_base_actions ADD character_id INT;
 ALTER TABLE character_base_actions ADD FOREIGN KEY (character_id) REFERENCES characters (id);
 ALTER TABLE character_base_actions ADD INDEX (character_id);
 ALTER TABLE character_base_actions DROP COLUMN character_id;
+ALTER TABLE character_base_actions RENAME COLUMN in_combat TO available;
+ALTER TABLE character_base_actions MODIFY available ENUM('in_combat', 'out_of_combat', 'always');
 
 INSERT INTO character_base_actions VALUES
 (1, 'movement', null, 1),
@@ -92,8 +94,20 @@ INSERT INTO character_base_actions VALUES
 (4, 'pick_up_heavy_object', 0, 1),
 (5, 'trade', 0, 1),
 (6, 'craft_item', 0, 1),
-(7, 'careful_movement', 0, 2),
+(7, 'careful_movement', 0, 2);
+
+
 
 SHOW CREATE TABLE character_base_actions;
 ALTER TABLE character_base_actions DROP FOREIGN KEY character_base_actions_ibfk_1;
 ALTER TABLE character_base_actions DROP character_id;
+
+UPDATE character_base_actions
+    SET available = (case when id = 1 then 'always'
+                         when id = 2 then 'in_combat'
+                         when id = 3 then 'in_combat'
+                         when id = 4 then 'out_of_combat'
+                         when id = 5 then 'out_of_combat'
+                         when id = 6 then 'out_of_combat'
+                         when id = 7 then 'out_of_combat'
+                    end);

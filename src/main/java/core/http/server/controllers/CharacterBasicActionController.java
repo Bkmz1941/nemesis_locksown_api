@@ -4,17 +4,16 @@ import com.google.gson.Gson;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import core.http.resources.CharacterResource;
 import entities.charcter.Character;
+import entities.charcter.CharacterBasicAction;
+import services.dao.CharacterBasicActionsDAO;
 import services.dao.CharacterDAO;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.Comparator;
 import java.util.SortedSet;
-import java.util.TreeSet;
 
-public class CharacterController implements HttpHandler {
+public class CharacterBasicActionController implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
         setHeaders(exchange);
@@ -29,14 +28,9 @@ public class CharacterController implements HttpHandler {
     }
 
     private String index() throws IOException {
-        SortedSet<Character> characters = CharacterDAO.getAll();
-        SortedSet<CharacterResource> characterResource = new TreeSet<>(Comparator.comparingInt(CharacterResource::getId));
+        SortedSet<CharacterBasicAction> characterBasicActions = CharacterBasicActionsDAO.getAll();
 
-        for (Character character: characters) {
-            characterResource.add(new CharacterResource(character));
-        }
-
-        return new Gson().toJson(characterResource);
+        return new Gson().toJson(characterBasicActions);
     }
 
     private void sendResponse(HttpExchange exchange, String response) throws IOException {

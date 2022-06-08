@@ -1,4 +1,4 @@
-package entities.charcater;
+package entities.charcter;
 
 public enum CharacterColor {
     BLUE,

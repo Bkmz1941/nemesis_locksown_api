@@ -1,7 +1,7 @@
 package core.http.resources;
 
-import entities.charcater.Character;
-import entities.charcater.CharacterColor;
+import entities.charcter.Character;
+import entities.charcter.CharacterColor;
 
 import java.io.IOException;
 

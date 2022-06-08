@@ -1,9 +1,7 @@
 package services.dao;
 
 import core.database.DatabaseConnection;
-import entities.room.Room;
-import entities.charcater.Character;
-import entities.room.RoomAction;
+import entities.charcter.Character;
 
 import java.sql.ResultSet;
 import java.util.Comparator;
