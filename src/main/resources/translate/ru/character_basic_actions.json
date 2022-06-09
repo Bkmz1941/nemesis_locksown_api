@@ -1,0 +1,23 @@
+{
+  "shoot": {
+    "name": "Выстрелить из оружия"
+  },
+  "melee_attack": {
+    "name": "Ударить"
+  },
+  "pick_up_heavy_object": {
+    "name": "Подобрать тяжелый предмет"
+  },
+  "trade": {
+    "name": "Обменяться"
+  },
+  "craft_item": {
+    "name": "Сделать предмет"
+  },
+  "movement": {
+    "name": "Переместиться"
+  },
+  "careful_movement": {
+    "name": "Тихо переместиться"
+  }
+}

@@ -1,0 +1,114 @@
+/** ROOMS **/
+CREATE TABLE rooms (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255) NOT NULL,
+    type ENUM('basic', 'additional', 'special') NOT NULL,
+    computer BOOLEAN NOT NULL DEFAULT false
+);
+
+INSERT INTO rooms VALUES
+(1, 'archive_room', 'basic', 1),
+(2, 'cave_entrance_room', 'basic', 0),
+(3, 'cooling_system_room', 'basic', 1),
+(4, 'decon_room', 'basic', 0),
+(5, 'emergency_room', 'basic', 0),
+(6, 'laboratory_room', 'basic', 1),
+(7, 'cargo_a_room', 'basic', 0),
+(8, 'nest_room', 'basic', 0),
+(9, 'power_generator_room', 'basic', 0),
+(10, 'transmitter_control_room', 'basic', 1);
+
+ALTER TABLE rooms ADD description VARCHAR(255) NULL AFTER donation_paypal_email;
+
+ALTER TABLE rooms MODIFY type ENUM('technical', 'medical', 'armory', 'multi', 'unknown') NOT NULL;
+ALTER TABLE character_base_actions MODIFY in_combat BOOLEAN NULL DEFAULT NULL;
+
+/** ROOM_ACTIONS **/
+CREATE TABLE room_actions (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255) NOT NULL,
+    cost INT NOT NULL DEFAULT 2,
+    room_id INT,
+    FOREIGN KEY (room_id) REFERENCES rooms (id) ON DELETE CASCADE,
+    INDEX (room_id)
+);
+
+ALTER TABLE room_actions ADD conditional_text VARCHAR(255) NULL AFTER system_name;
+ALTER TABLE room_actions ADD hint VARCHAR(255) NULL AFTER conditional_text;
+ALTER TABLE room_actions DROP COLUMN conditional_text;
+ALTER TABLE room_actions DROP COLUMN hint;
+ALTER TABLE rooms DROP COLUMN rooms;
+
+INSERT INTO room_actions VALUES
+(1, 'examine_the_archives', 2, 1),
+(2, 'move_through_technical_corridors', 2, 2),
+(3, 'initiate_auto_destruction_sequence', 2, 3),
+(4, 'perform_decontamination_procedure', 2, 4),
+(5, 'treat_your_wounds', 2, 5),
+(6, 'analyze_object', 2, 6),
+(7, 'enter_css_pod', 2, 7),
+(8, 'take_egg', 2, 8),
+(12, 'try_to_destroy_egg', 2, 8),
+(9, 'stop_auto_destruction_sequence', 2, 9),
+(10, 'power_a_section', 2, 9),
+(11, 'send_a_signal', 2, 10),
+(12, 'check_an_objective', 2, 10);
+
+INSERT INTO room_actions VALUES (13, 'try_to_destroy_egg', 2, 8);
+DELETE FROM room_actions WHERE id=13;
+
+SELECT * FROM rooms r LEFT JOIN room_actions ra ON r.id = ra.room_id;
+
+/** CHARACTERS **/
+CREATE TABLE characters (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255) NOT NULL,
+    color ENUM('violet', 'blue', 'green', 'red', 'orange', 'white') NOT NULL
+);
+INSERT INTO characters VALUES
+(1, 'sentry', 'blue'),
+(2, 'lab_rat', 'violet'),
+(3, 'hacker', 'green'),
+(4, 'xenobiologist', 'white'),
+(5, 'janitor', 'orange'),
+(6, 'survivor', 'red');
+
+CREATE TABLE character_base_actions (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255) NOT NULL,
+    in_combat BOOLEAN NULL DEFAULT NULL,
+    cost INT NOT NULL DEFAULT 1
+);
+
+ALTER TABLE character_base_actions MODIFY in_combat BOOLEAN NULL DEFAULT NULL;
+ALTER TABLE character_base_actions ADD character_id INT;
+ALTER TABLE character_base_actions ADD FOREIGN KEY (character_id) REFERENCES characters (id);
+ALTER TABLE character_base_actions ADD INDEX (character_id);
+ALTER TABLE character_base_actions DROP COLUMN character_id;
+ALTER TABLE character_base_actions RENAME COLUMN in_combat TO available;
+ALTER TABLE character_base_actions MODIFY available ENUM('in_combat', 'out_of_combat', 'always');
+
+INSERT INTO character_base_actions VALUES
+(1, 'movement', null, 1),
+(2, 'shoot', 1, 1),
+(3, 'melee_attack', 1, 1),
+(4, 'pick_up_heavy_object', 0, 1),
+(5, 'trade', 0, 1),
+(6, 'craft_item', 0, 1),
+(7, 'careful_movement', 0, 2);
+
+
+
+SHOW CREATE TABLE character_base_actions;
+ALTER TABLE character_base_actions DROP FOREIGN KEY character_base_actions_ibfk_1;
+ALTER TABLE character_base_actions DROP character_id;
+
+UPDATE character_base_actions
+    SET available = (case when id = 1 then 'always'
+                         when id = 2 then 'in_combat'
+                         when id = 3 then 'in_combat'
+                         when id = 4 then 'out_of_combat'
+                         when id = 5 then 'out_of_combat'
+                         when id = 6 then 'out_of_combat'
+                         when id = 7 then 'out_of_combat'
+                    end);
