@@ -7,7 +7,15 @@ import core.http.server.HandlerResources;
 import entities.room.Room;
 import org.junit.Test;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.Scanner;
+import java.util.Stack;
 
 /**
  * Unit test for simple App.
@@ -19,8 +27,22 @@ public class AppTest
      */
     @Test
     public void shouldAnswerWithTrue() throws IOException {
-        Room room = new Room(1, "archive_room", "basic", "basic",false);
-        System.out.println(room.getName());
+        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in))) {
+            while (bufferedReader.ready()) {
+                String line = bufferedReader.readLine();
+
+                char[] chars = line.toCharArray();
+                for (int i = 0; i < chars.length; i++) {
+                    if (i % 2 == 1) {
+                        System.out.print(String.valueOf(chars[i]).toUpperCase());
+                    } else {
+                        System.out.print(String.valueOf(chars[i]).toLowerCase());
+                    }
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Something went wrong : " + e);
+        }
 
         assertTrue( true );
     }

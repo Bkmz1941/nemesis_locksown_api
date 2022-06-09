@@ -1,0 +1,20 @@
+{
+  "sentry": {
+    "name": "ЧВК"
+  },
+  "lab_rat": {
+    "name": "Подопытная 05"
+  },
+  "hacker": {
+    "name": "Программист"
+  },
+  "xenobiologist": {
+    "name": "Ксенобиолог"
+  },
+  "janitor": {
+    "name": "Уборщик"
+  },
+  "survivor": {
+    "name": "Выжившая"
+  }
+}

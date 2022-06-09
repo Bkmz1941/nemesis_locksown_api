@@ -18,7 +18,8 @@ INSERT INTO rooms VALUES
 (9, 'power_generator_room', 'basic', 0),
 (10, 'transmitter_control_room', 'basic', 1);
 
-ALTER TABLE rooms ADD description VARCHAR(255) NULL AFTER system_name;
+ALTER TABLE rooms ADD description VARCHAR(255) NULL AFTER donation_paypal_email;
+
 ALTER TABLE rooms MODIFY type ENUM('technical', 'medical', 'armory', 'multi', 'unknown') NOT NULL;
 ALTER TABLE character_base_actions MODIFY in_combat BOOLEAN NULL DEFAULT NULL;
 

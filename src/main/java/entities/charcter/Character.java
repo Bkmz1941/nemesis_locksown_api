@@ -1,6 +1,7 @@
 package entities.charcter;
 
 import core.http.server.HttpServer;
+import helpers.FileWithTranslate;
 
 import java.io.IOException;
 
@@ -27,8 +28,15 @@ public class Character {
         return color;
     }
 
+    public String getName() {
+        return FileWithTranslate.getKey("ru", "characters", this.systemName, "name");
+    }
+
     public String getImageFullImageLink() throws IOException {
         return HttpServer.port + ":/" + HttpServer.getInstance().getAddress() + "/resources/images/characters/" + this.systemName + ".png";
+    }
+    public String getImageMiniImageLink() throws IOException {
+        return HttpServer.port + ":/" + HttpServer.getInstance().getAddress() + "/resources/images/characters/" + this.systemName + "_mini.png";
     }
 
     private CharacterColor detectCharacterColor(String type) {

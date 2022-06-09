@@ -50,5 +50,17 @@ public class CharacterController implements HttpHandler {
         final Headers headers = exchange.getResponseHeaders();
         headers.set("Content-Type", "application/json");
         headers.set("Accept", "application/json");
+        headers.set("Access-Control-Allow-Origin", "*");
+//        headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+//        headers.set("Access-Control-Allow-Headers", "Content-Type,Authorization");
+
+//        httpExchange.getResponseHeaders().add("Access-Control-Allow-Origin", "*");
+//
+//        if (httpExchange.getRequestMethod().equalsIgnoreCase("OPTIONS")) {
+//            httpExchange.getResponseHeaders().add("Access-Control-Allow-Methods", "GET, OPTIONS");
+//            httpExchange.getResponseHeaders().add("Access-Control-Allow-Headers", "Content-Type,Authorization");
+//            httpExchange.sendResponseHeaders(204, -1);
+//            return;
+//        }
     }
 }
