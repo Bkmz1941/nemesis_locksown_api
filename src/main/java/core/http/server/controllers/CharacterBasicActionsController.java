@@ -49,5 +49,6 @@ public class CharacterBasicActionsController implements HttpHandler {
         final Headers headers = exchange.getResponseHeaders();
         headers.set("Content-Type", "application/json");
         headers.set("Accept", "application/json");
+        headers.set("Access-Control-Allow-Origin", "*");
     }
 }
