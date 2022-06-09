@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf99375f-0634-4db5-ba52-b0683a012b8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translate/ru/characters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/enable_ssh_agent.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/database/sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/sql.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharacterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/charcater/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/charcater/Character.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/hacker.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/janitor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/lab_rat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/sentry.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/survivor.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/xenobiologist.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +48,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/src/main/resources/images" />
       <recent name="$PROJECT_DIR$" />
     </key>
