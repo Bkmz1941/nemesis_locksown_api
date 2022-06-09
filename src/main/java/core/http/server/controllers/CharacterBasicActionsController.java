@@ -4,16 +4,18 @@ import com.google.gson.Gson;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import entities.charcter.Character;
+import core.http.resources.CharacterBasicActionsResource;
 import entities.charcter.CharacterBasicAction;
 import services.dao.CharacterBasicActionsDAO;
-import services.dao.CharacterDAO;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.Comparator;
+import java.util.Set;
 import java.util.SortedSet;
+import java.util.TreeSet;
 
-public class CharacterBasicActionController implements HttpHandler {
+public class CharacterBasicActionsController implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
         setHeaders(exchange);
@@ -28,9 +30,12 @@ public class CharacterBasicActionController implements HttpHandler {
     }
 
     private String index() throws IOException {
-        SortedSet<CharacterBasicAction> characterBasicActions = CharacterBasicActionsDAO.getAll();
+        Set<CharacterBasicAction> characterBasicActions = CharacterBasicActionsDAO.getAll();
+        Set<CharacterBasicActionsResource> characterBasicActionsResource = new TreeSet<>(Comparator.comparingInt(CharacterBasicActionsResource::getId));
 
-        return new Gson().toJson(characterBasicActions);
+        characterBasicActions.forEach(el -> characterBasicActionsResource.add(new CharacterBasicActionsResource(el)));
+
+        return new Gson().toJson(characterBasicActionsResource);
     }
 
     private void sendResponse(HttpExchange exchange, String response) throws IOException {

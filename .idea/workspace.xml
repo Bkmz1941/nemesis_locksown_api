@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf99375f-0634-4db5-ba52-b0683a012b8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/enable_ssh_agent.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterBasicActionsResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/translate/ru/character_basic_actions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/server/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharacterBasicActionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharacterBasicActionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/charcter/CharacterBasicAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/charcter/CharacterBasicAction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +56,11 @@
       <recent name="$PROJECT_DIR$/src/main/resources/images" />
       <recent name="$PROJECT_DIR$" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="core.http.resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.shouldAnswerWithTrue">
+  <component name="RunManager" selected="Maven.NemesisLockdown [clean,compile...]">
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NemesisLockdown" />
       <extension name="coverage">

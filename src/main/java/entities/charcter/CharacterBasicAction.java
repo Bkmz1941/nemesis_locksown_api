@@ -1,5 +1,7 @@
 package entities.charcter;
 
+import helpers.FileWithTranslate;
+
 public class CharacterBasicAction {
     private final int id;
     private final String systemName;
@@ -20,6 +22,18 @@ public class CharacterBasicAction {
             case "always" -> CharacterBasicActionAvailable.ALWAYS;
             default -> throw new IllegalStateException("Unexpected value: " + available);
         };
+    }
+
+    public Integer getCost() {
+        return cost;
+    }
+
+    public String getName() {
+        return FileWithTranslate.getKey("ru", "character_basic_actions", this.systemName, "name");
+    }
+
+    public CharacterBasicActionAvailable getAvailable() {
+        return available;
     }
 
     public int getId() {

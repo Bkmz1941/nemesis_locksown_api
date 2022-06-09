@@ -1,6 +1,6 @@
 package core.http.server;
 
-import core.http.server.controllers.CharacterBasicActionController;
+import core.http.server.controllers.CharacterBasicActionsController;
 import core.http.server.controllers.CharacterController;
 import core.http.server.controllers.RoomsController;
 
@@ -30,6 +30,6 @@ public class HttpServer {
         server.createContext("/resources", new HandlerResources());
         server.createContext("/api/rooms", new RoomsController());
         server.createContext("/api/characters", new CharacterController());
-        server.createContext("/api/characters/actions/basic", new CharacterBasicActionController());
+        server.createContext("/api/characters/actions/basic", new CharacterBasicActionsController());
     }
 }
