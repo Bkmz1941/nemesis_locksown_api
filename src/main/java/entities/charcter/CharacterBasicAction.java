@@ -5,7 +5,7 @@ import helpers.FileWithTranslate;
 public class CharacterBasicAction {
     private final int id;
     private final String systemName;
-    private final CharacterBasicActionAvailable available;
+    private final CharacterActionAvailable available;
     private final Integer cost;
 
     public CharacterBasicAction(int id, String systemName, String available, Integer cost) {
@@ -15,11 +15,11 @@ public class CharacterBasicAction {
         this.cost = cost;
     }
 
-    private CharacterBasicActionAvailable detectActionAvailable(String available) {
+    private CharacterActionAvailable detectActionAvailable(String available) {
         return switch (available) {
-            case "in_combat" -> CharacterBasicActionAvailable.IN_COMBAT;
-            case "out_of_combat" -> CharacterBasicActionAvailable.OUT_OF_COMBAT;
-            case "always" -> CharacterBasicActionAvailable.ALWAYS;
+            case "in_combat" -> CharacterActionAvailable.IN_COMBAT;
+            case "out_of_combat" -> CharacterActionAvailable.OUT_OF_COMBAT;
+            case "always" -> CharacterActionAvailable.ALWAYS;
             default -> throw new IllegalStateException("Unexpected value: " + available);
         };
     }
@@ -32,7 +32,7 @@ public class CharacterBasicAction {
         return FileWithTranslate.getKey("ru", "character_basic_actions", this.systemName, "name");
     }
 
-    public CharacterBasicActionAvailable getAvailable() {
+    public CharacterActionAvailable getAvailable() {
         return available;
     }
 

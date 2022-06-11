@@ -1,3 +1,53 @@
+/** CHARACTER ACTION CARDS **/
+CREATE TABLE character_action_cards (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255) NOT NULL,
+    cost int,
+    character_id int,
+    interruption BOOLEAN,
+
+    FOREIGN KEY (character_id) REFERENCES characters (id) ON DELETE CASCADE,
+    INDEX (character_id)
+);
+ALTER TABLE character_action_cards ADD COLUMN available ENUM('in_combat', 'out_of_combat', 'always');
+
+CREATE TABLE character_action_card_values (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    system_name VARCHAR(255),
+    character_action_card_id int,
+
+    FOREIGN KEY (character_action_card_id) REFERENCES character_action_cards (id) ON DELETE CASCADE,
+    INDEX (character_action_card_id)
+);
+
+INSERT INTO character_action_cards (system_name, cost, character_id, interruption, available) VALUES
+('search', 0, 1, false, 'out_of_combat'),
+('search', 0, 1, false, 'out_of_combat'),
+('rest', 0, 1, false, 'out_of_combat'),
+('demolition', 0, 1, false, 'always'),
+('interruption', 0, 1, true, 'always'),
+('repairs', 1, 1, false, 'out_of_combat'),
+('stun', 0, 1, false, 'always'),
+('quarantine', 1, 1, false, 'out_of_combat'),
+('facility_tour', 0, 1, false, 'always'),
+('defense_plan', 0, 1, false, 'out_of_combat');
+
+INSERT INTO character_action_card_values (system_name, character_action_card_id) VALUES
+('get_items', 1),
+('get_items', 2),
+('scan_contamination_cards', 3),
+('destroy_closed_door', 4),
+('break_room', 4),
+('cancel_someone_action', 5),
+('cancel_someone_interruption', 5),
+('fix_up_room', 6),
+('discard_all_cards', 7),
+('retreat_intruder', 7),
+('close_all_doors', 8),
+('move_with_someone', 9),
+('free_use_room_action', 10),
+('check_rooms', 10);
+
 /** ROOMS **/
 CREATE TABLE rooms (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

@@ -1,7 +1,8 @@
 package core.http.server;
 
-import core.http.server.controllers.CharacterBasicActionsController;
-import core.http.server.controllers.CharacterController;
+import core.http.server.controllers.CharactersActionCardsController;
+import core.http.server.controllers.CharactersBasicActionsController;
+import core.http.server.controllers.CharactersController;
 import core.http.server.controllers.RoomsController;
 
 import java.io.IOException;
@@ -29,7 +30,8 @@ public class HttpServer {
     private static void handlerRoutes() {
         server.createContext("/resources", new HandlerResources());
         server.createContext("/api/rooms", new RoomsController());
-        server.createContext("/api/characters", new CharacterController());
-        server.createContext("/api/characters/actions/basic", new CharacterBasicActionsController());
+        server.createContext("/api/characters", new CharactersController());
+        server.createContext("/api/characters/actions/basic", new CharactersBasicActionsController());
+        server.createContext("/api/characters/actions/cards", new CharactersActionCardsController());
     }
 }

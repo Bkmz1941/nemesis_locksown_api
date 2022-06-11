@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class FileHelper {
+public class FileHelper implements AutoCloseable {
     public static File streamToFile(InputStream in) {
         if (in == null) {
             return null;
@@ -28,5 +28,10 @@ public class FileHelper {
             System.out.println(e);
         }
         return null;
+    }
+
+    @Override
+    public void close() throws Exception {
+
     }
 }

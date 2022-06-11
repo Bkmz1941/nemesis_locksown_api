@@ -11,36 +11,52 @@ import services.dao.RoomDAO;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 public class Controller implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
-        setHeaders(exchange);
-
-        String response = "";
-
-        if ("GET".equals(exchange.getRequestMethod())) {
-            response = index();
+        try {
+            setHeaders(exchange);
+            sendResponse(exchange, makeResponse(exchange));
+        } catch (Exception e) {
+            System.out.println(e);
         }
-
-        sendResponse(exchange, response);
     }
 
-    private String index() throws IOException {
-        return new Gson().toJson(RoomDAO.getAll());
+    protected String makeResponse(HttpExchange exchange) {
+        return "";
     }
 
-    private void sendResponse(HttpExchange exchange, String response) throws IOException {
+    protected Map<String, String> queryToMap(String query) {
+        if(query == null) {
+            return null;
+        }
+        Map<String, String> result = new HashMap<>();
+        for (String param : query.split("&")) {
+            String[] entry = param.split("=");
+            if (entry.length > 1) {
+                result.put(entry[0], entry[1]);
+            }else{
+                result.put(entry[0], "");
+            }
+        }
+        return result;
+    }
+
+    protected void sendResponse(HttpExchange exchange, String response) throws IOException {
         final byte[] rawResponseBody = response.getBytes(StandardCharsets.UTF_8);
         exchange.sendResponseHeaders(200, rawResponseBody.length);
         exchange.getResponseBody().write(rawResponseBody);
         exchange.close();
     }
 
-    private void setHeaders(HttpExchange exchange) {
+    protected void setHeaders(HttpExchange exchange) {
         final Headers headers = exchange.getResponseHeaders();
         headers.set("Content-Type", "application/json");
         headers.set("Accept", "application/json");
+        headers.set("Access-Control-Allow-Origin", "*");
     }
 }

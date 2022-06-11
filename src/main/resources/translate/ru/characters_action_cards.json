@@ -1,0 +1,29 @@
+{
+  "search": {
+    "name": "Поиск"
+  },
+  "rest": {
+    "name": "Отдых"
+  },
+  "demolition": {
+    "name": "Разрушение"
+  },
+  "interruption": {
+    "name": "Прерывание"
+  },
+  "repairs": {
+    "name": "Ремонт"
+  },
+  "stun": {
+    "name": "Оглушение"
+  },
+  "quarantine": {
+    "name": "Объявление карантина"
+  },
+  "facility_tour": {
+    "name": "Экскурсия по объекту "
+  },
+  "defense_plan": {
+    "name": "План защиты"
+  }
+}

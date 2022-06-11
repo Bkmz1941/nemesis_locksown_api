@@ -16,42 +16,29 @@ import java.util.Comparator;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-public class RoomsController implements HttpHandler {
+public class RoomsController extends Controller {
     @Override
-    public void handle(HttpExchange exchange) throws IOException {
-        setHeaders(exchange);
-
+    protected String makeResponse(HttpExchange exchange) {
         String response = "";
 
         if ("GET".equals(exchange.getRequestMethod())) {
             response = index();
         }
-
-        sendResponse(exchange, response);
+        return response;
     }
 
-    private String index() throws IOException {
-        SortedSet<Room> rooms = RoomDAO.getAll();
-        SortedSet<RoomResource> roomResources = new TreeSet<>(Comparator.comparingInt(RoomResource::getId));
+    private String index() {
+        try {
+            SortedSet<Room> rooms = RoomDAO.getAll();
+            SortedSet<RoomResource> roomResources = new TreeSet<>(Comparator.comparingInt(RoomResource::getId));
 
-        for (Room room: rooms) {
-            roomResources.add(new RoomResource(room));
-        }
+            for (Room room: rooms) {
+                roomResources.add(new RoomResource(room));
+            }
 
-        return new Gson().toJson(roomResources);
-    }
+            return new Gson().toJson(roomResources);
+        } catch (Exception ignored) {}
 
-    private void sendResponse(HttpExchange exchange, String response) throws IOException {
-        final byte[] rawResponseBody = response.getBytes(StandardCharsets.UTF_8);
-        exchange.sendResponseHeaders(200, rawResponseBody.length);
-        exchange.getResponseBody().write(rawResponseBody);
-        exchange.close();
-    }
-
-    private void setHeaders(HttpExchange exchange) {
-        final Headers headers = exchange.getResponseHeaders();
-        headers.set("Content-Type", "application/json");
-        headers.set("Accept", "application/json");
-        headers.set("Access-Control-Allow-Origin", "*");
+        return null;
     }
 }
