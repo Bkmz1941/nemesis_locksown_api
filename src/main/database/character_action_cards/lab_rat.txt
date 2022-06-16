@@ -1,0 +1,78 @@
+/** LAB_RAT **/
+1. WEIRD METABOLISM
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Discard a Slime marker
+- Discard 1 Contamination card from your hand to draw 2 cards from your deck
+
+2. SENSITIVE HEADING
+- Discard a Noise marker from a chosen Corridor connected to the Room you are in
+- Place a Noise marker in a Corridor connected to the Room you are in
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+
+3. FEEL OF THE DARK
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Discard this card during the Event Phase to ignore the "in Darkness" effect of an Event for you
+- Discard this card during a Surprise Attack (after drawing an Attack card) to ignore its effect
+
+4. REST
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Scan all Contamination cards in you hand and remove all Uninfected cards. If any of the cards were INFECTED, follow the Infection procedure
+
+5. DEMOLITION
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Destroy 1 Closed Door in a Corridor connected to the Room you are in
+- Place a Malfunction marker in the Room you are in
+
+6. INTERRUPTION
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Discard this card to cancel any Action performed by another player in the Room you are in (the other player must still pay the Action Cost)
+- Cancel an Interruption Action used by another player in your Room
+
+7. BASIC REPAIRS
+{
+    cost: 2,
+    available: "OUT_IN_COMBAT"
+}
+- Discard a Malfunction marker from the Room you are in
+
+8. INCONSPICUOUS
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Discard this card when wan Intruder attacks you (but before drawing an Attack card) and there is another Character in the Room you are in.
+The Intruder attacks this character instead of you
+- [In Darkness] Discard this card when you have to perform a Noise roll during the Intruder bag development step of the Event Phase.
+You do not have to perform this roll
+
+9. SEARCH
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its desk
+
+10. SEARCH
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its desk

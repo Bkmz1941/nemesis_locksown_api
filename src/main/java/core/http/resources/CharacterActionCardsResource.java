@@ -12,10 +12,11 @@ import java.util.TreeSet;
 public class CharacterActionCardsResource {
     private final int id;
     private final String name;
+    private final String systemName;
     private final CharacterActionAvailable available;
     private final int cost;
     private final boolean interruption;
-    private final Object getFullImageLink;
+    private final Object fullImageLink;
     private Set<CharacterActionCardValueResource> values = new TreeSet<>(Comparator.comparingInt(CharacterActionCardValueResource::getId));
 
     public CharacterActionCardsResource(CharacterActionCard characterActionCard)  {
@@ -24,7 +25,8 @@ public class CharacterActionCardsResource {
         this.available = characterActionCard.getAvailable();
         this.cost = characterActionCard.getCost();
         this.interruption = characterActionCard.getInterruption();
-        this.getFullImageLink = characterActionCard.getFullImageLink();
+        this.fullImageLink = characterActionCard.getFullImageLink();
+        this.systemName = characterActionCard.getSystemName();
 
         for (CharacterActionCardValue characterActionCardValue: characterActionCard.getValues()) {
             this.values.add(new CharacterActionCardValueResource(characterActionCardValue));

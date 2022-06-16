@@ -1,0 +1,78 @@
+/** JANITOR **/
+1. EMERGENCY KEY
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- If you are in an Elevator Room, call the Elevator and you it, even if there is no Power in the Elevator
+- Open/Close 1 Door in a Corridor connected to the Room you are in
+
+2. CLEAN UP
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Discard a Malfunction marker from the Room you are in
+- Discard a Fire marker from the Room you are in
+
+3. MAINTENANCE PLAN
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- If you are in a White or Yellow Room, use its Room Action without paying its Cost
+- Check any 2 Unexplored Room tiles (but do not look at their Exploration tokens)
+
+4. JURY-RIGGING
+{
+    cost: 2,
+    available: "OUT_IN_COMBAT"
+}
+- If you are in a Yellow Room, reduce the Item Counter by 1 and take the Flamethrower, the Enviro-Suit or the Taser
+
+5. SEARCH
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its desk
+
+6. SEARCH
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its desk
+
+7. REST
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Scan all Contamination cards in you hand and remove all Uninfected cards. If any of the cards were INFECTED, follow the Infection procedure
+
+8. DEMOLITION
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Destroy 1 Closed Door in a Corridor connected to the Room you are in
+- Place a Malfunction marker in the Room you are in
+
+9. INTERRUPTION
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Discard this card to cancel any Action performed by another player in the Room you are in (the other player must still pay the Action Cost)
+- Cancel an Interruption Action used by another player in your Room
+
+10. IT SHOULD WORK
+{
+    cost: 1,
+    available: "OUT_IN_COMBAT"
+}
+- Use a Room Action even if there is a Malfunction marker
+- If you are in a Room with a Computer and in a Section without Power, use a Computer Action
+
+

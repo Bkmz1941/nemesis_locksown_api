@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf99375f-0634-4db5-ba52-b0683a012b8d" name="Changes" comment="" />
+    <list default="true" id="bf99375f-0634-4db5-ba52-b0683a012b8d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/hacker.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/janitor.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/lab_rat.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/survivor.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/xenobiologist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterActionCardsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterActionCardsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterResource.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +55,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/database/character_action_cards" />
       <recent name="$PROJECT_DIR$/scripts" />
       <recent name="$PROJECT_DIR$/src/main/resources/images" />
       <recent name="$PROJECT_DIR$" />
@@ -53,7 +64,20 @@
       <recent name="core.http.resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.NemesisLockdown [clean,compile...]">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.App" />
+      <module name="NemesisLockdown" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="NemesisLockdown" />
       <extension name="coverage">
@@ -128,6 +152,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.AppTest" />
       <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
       <item itemvalue="Maven.NemesisLockdown [clean,compile...]" />
@@ -135,6 +160,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.AppTest.shouldAnswerWithTrue" />
         <item itemvalue="JUnit.AppTest" />
       </list>
@@ -172,5 +198,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/NemesisLockdown$App.ic" NAME="App Coverage Results" MODIFIED="1655283017747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>app.*</FILTER>
+    </SUITE>
   </component>
 </project>

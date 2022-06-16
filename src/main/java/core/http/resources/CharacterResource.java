@@ -11,6 +11,7 @@ public class CharacterResource {
     private final String fullImageLink;
     private final String miniImageLink;
     private final String name;
+    private final String systemName;
     private final CharacterColor color;
 
     // HttpServer
@@ -20,6 +21,7 @@ public class CharacterResource {
         this.fullImageLink = character.getImageFullImageLink();
         this.miniImageLink = character.getImageMiniImageLink();
         this.color = character.getColor();
+        this.systemName = character.getSystemName();
     }
 
     public int getId() {

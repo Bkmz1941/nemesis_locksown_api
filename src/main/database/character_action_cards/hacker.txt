@@ -1,0 +1,79 @@
+/** Hacker **/
+
+1. SEARCH
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its desk
+
+2. SEARCH
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its desk
+
+3. REST
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Scan all Contamination cards in you hand and remove all Uninfected cards. If any of the cards were INFECTED, follow the Infection procedure
+
+4. DEMOLITION
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Destroy 1 Closed Door in a Corridor connected to the Room you are in
+- Place a Malfunction marker in the Room you are in
+
+5. INTERRUPTION
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Discard this card to cancel any Action performed by another player in the Room you are in (the other player must still pay the Action Cost)
+- Cancel an Interruption Action used by another player in your Room
+
+6. RECHARGE
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Use in a Section with Power to add 2 AMMO to your Energy Weapon
+
+7. NEURALICK
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- If you are in a Room without a Computer and in a Section with Power, use a Computer Action
+- If you are in a Room with a Computer and in a Section without Power, use a Computer Action
+
+8. BYPASS
+{
+    cost: 1,
+    available: "OUT_IN_COMBAT"
+}
+- If you are in a Room with a Computer and in Section with Power, you may perform any number of Actions from the Computer Action card.
+Discard the Computer Action card afterwards
+- Flip a Power token of the Section you are in
+
+9. IT WORK FOR ME
+{
+    cost: 1,
+    available: "OUT_IN_COMBAT"
+}
+- Discard a Malfunction marker from the Room you are in. If you are in a Room with a Computer and in a Section with Power, you may use a Computer Action
+
+10. MASTER PLAN
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- If you are in a Room with a Computer, you can use its Room Action without paying its Cost
+- Check any 2 Unexplored Rooms tiles (but do not look at their Exploration tokens)
+
+

@@ -1,0 +1,79 @@
+/** Xenobiologist **/
+
+1. SEARCH
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its desk
+
+2. SEARCH
+{
+    cost: 0,
+    available: "OUT_IN_COMBAT"
+}
+- Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its desk
+
+3. DEMOLITION
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Destroy 1 Closed Door in a Corridor connected to the Room you are in
+- Place a Malfunction marker in the Room you are in
+
+4. INTERRUPTION
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Discard this card to cancel any Action performed by another player in the Room you are in (the other player must still pay the Action Cost)
+- Cancel an Interruption Action used by another player in your Room
+
+5. RUSHED ANALYSIS
+{
+    cost: 0,
+    available: "OUT_OF_COMBAT"
+}
+- Scan all Contamination cards in your hand and remove all Uninfected cards. If you removed at least 1 card this way, gain 1 Knowledge.
+If any of the cards were INFECTED, follow the Infection procedure
+
+6. WORKSPACE PLAN
+{
+    cost: 0,
+    available: "OUT_OF_COMBAT"
+}
+- If you are in a White or Green Room, use its Room Action without paying its Cost
+- Check any 2 Unexplored Room tiles (but do not look at their Exploration tokens)
+
+7. PHEROMONES
+{
+    cost: 0,
+    available: "IN_COMBAT"
+}
+- Discard an Egg or a Carcass after an Intruder Attack to ignore that Attack.
+All Characters in the Room you are in (including yourself) gain a Slime marker.
+[Knowledge 6]: Instead of ignoring this Attack, you may choose another Character in the Room you are in to become the target of this Attack
+
+8. FIELD EXPERIENCE
+{
+    cost: 0,
+    available: "ALWAYS"
+}
+- Reduce the Item counter by 1 and gain 1 Knowledge
+- [Knowledge 4] - Draw 2 event cards, then return 1 of them to the top of the desk and the other to the bottom
+- [Knowledge 6] - Draw 2 Intruder Attack cards, then return 1 of then to the top of the deck and the other to the bottom
+
+9. VIVISECTION
+{
+    cost: 0,
+    available: "IN_COMBAT"
+}
+- Discard 1 USE from your Probe Arm. Choose 1 Intruder in the Room you are in. It suffers 1 Injury plus 1 for each 2 Knowledge you have
+
+10. REPAIRS
+{
+    cost: 1,
+    available: "OUT_IN_COMBAT"
+}
+- Discard a Malfunction marker from the Room you are in
