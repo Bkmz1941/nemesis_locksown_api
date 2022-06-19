@@ -33,20 +33,20 @@ INSERT INTO character_action_cards (system_name, cost, character_id, interruptio
 ('defense_plan', 0, 1, false, 'out_of_combat');
 
 INSERT INTO character_action_card_values (system_name, character_action_card_id) VALUES
-('get_items', 1),
-('get_items', 2),
-('scan_contamination_cards', 3),
-('destroy_closed_door', 4),
-('break_room', 4),
-('cancel_someone_action', 5),
-('cancel_someone_interruption', 5),
-('fix_up_room', 6),
-('discard_all_cards', 7),
-('retreat_intruder', 7),
-('close_all_doors', 8),
-('move_with_someone', 9),
-('free_use_room_action', 10),
-('check_rooms', 10);
+('get_items', 41),
+('get_items', 42),
+('scan_contamination_cards', 43),
+('destroy_closed_door', 44),
+('break_room', 44),
+('cancel_someone_action', 45),
+('cancel_someone_interruption', 45),
+('fix_up_room', 46),
+('attack', 47),
+('get_cards_as_wounds', 48),
+('dress_serious_wounds_of_item', 48),
+('use_tech_corridor', 49),
+('escape', 50);
+
 
 /** ROOMS **/
 CREATE TABLE rooms (

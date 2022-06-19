@@ -5,15 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf99375f-0634-4db5-ba52-b0683a012b8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/hacker.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/janitor.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/lab_rat.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/survivor.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/xenobiologist.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/character_action_cards/hacker.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/hacker.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/character_action_cards/janitor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/janitor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/character_action_cards/lab_rat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/lab_rat.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/character_action_cards/survivor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/survivor.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/character_action_cards/xenobiologist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/character_action_cards/xenobiologist.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/database/sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/database/sql.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterActionCardValueResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterActionCardValueResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterActionCardsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterActionCardsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterBasicActionsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterBasicActionsResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/CharacterResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/RoomActionResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/RoomActionResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/resources/RoomResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/resources/RoomResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharactersActionCardsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharactersActionCardsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharactersBasicActionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharactersBasicActionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharactersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/CharactersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/RoomsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/http/server/controllers/RoomsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/charcter/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/charcter/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/charcter/CharacterActionAvailable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/charcter/CharacterActionAvailable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/charcter/CharacterActionCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/charcter/CharacterActionCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/charcter/CharacterActionCardValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/charcter/CharacterActionCardValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/charcter/CharacterBasicAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/charcter/CharacterBasicAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/charcter/CharacterColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/charcter/CharacterColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/room/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/room/RoomAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/room/RoomAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/room/RoomGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/room/RoomGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/room/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/room/RoomType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/dao/CharacterBasicActionsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/dao/CharacterBasicActionsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/dao/CharacterDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/dao/CharacterDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/dao/CharactersActionCardsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/dao/CharactersActionCardsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/dao/RoomDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/dao/RoomDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/action_cards/sentry_defense_plan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/action_cards/sentry_demolition.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/action_cards/sentry_facility_tour.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/action_cards/sentry_interruption.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/action_cards/sentry_quarantine.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/action_cards/sentry_repairs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/action_cards/sentry_rest.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/action_cards/sentry_search.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/images/characters/action_cards/sentry_stun.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/translate/ru/characters_action_card_values.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translate/ru/characters_action_card_values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/translate/ru/characters_action_cards.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translate/ru/characters_action_cards.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +101,7 @@
       <recent name="core.http.resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Maven.NemesisLockdown [clean,compile...]">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.App" />
       <module name="NemesisLockdown" />

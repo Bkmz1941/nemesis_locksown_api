@@ -1,4 +1,4 @@
-package entities.charcter;
+package models.charcter;
 
 public enum CharacterActionAvailable {
     IN_COMBAT,

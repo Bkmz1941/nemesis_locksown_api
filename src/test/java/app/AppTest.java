@@ -2,20 +2,11 @@ package app;
 
 import static org.junit.Assert.assertTrue;
 
-import com.google.gson.Gson;
-import core.http.server.HandlerResources;
-import entities.room.Room;
 import org.junit.Test;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.Stack;
 
 /**
  * Unit test for simple App.

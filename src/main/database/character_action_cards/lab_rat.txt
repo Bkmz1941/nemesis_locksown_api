@@ -76,3 +76,17 @@ You do not have to perform this roll
     available: "OUT_IN_COMBAT"
 }
 - Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its desk
+
+
+SELECT @id := id FROM characters WHERE system_name='lab_rat';
+INSERT INTO character_action_cards (system_name, cost, character_id, interruption, available) VALUES
+('search', 0, @id, false, 'out_of_combat'),
+('search', 0, @id, false, 'out_of_combat'),
+('rest', 0, @id, false, 'out_of_combat'),
+('demolition', 0, @id, false, 'always'),
+('interruption', 0, @id, true, 'always'),
+('weird_metabolism', 0, @id, false, 'always'),
+('sensitive_heading', 0, @id, false, 'out_of_combat'),
+('feel_of_the_dark', 1, @id, false, 'always'),
+('basic_repairs', 2, @id, false, 'out_of_combat'),
+('INCONSPICUOUS inconspicuous', 0, @id, false, 'always');

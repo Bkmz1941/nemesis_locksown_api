@@ -1,4 +1,4 @@
-package entities.room;
+package models.room;
 
 public enum RoomGroup {
     BASIC,

@@ -1,4 +1,4 @@
-package entities.charcter;
+package models.charcter;
 
 import core.http.server.HttpServer;
 import helpers.FileWithTranslate;

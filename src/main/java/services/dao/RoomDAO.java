@@ -1,8 +1,7 @@
 package services.dao;
 
 import core.database.DatabaseConnection;
-import entities.room.Room;
-import entities.room.RoomAction;
+import models.room.Room;
 
 import java.sql.ResultSet;
 import java.util.*;

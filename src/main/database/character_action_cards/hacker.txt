@@ -76,4 +76,15 @@ Discard the Computer Action card afterwards
 - If you are in a Room with a Computer, you can use its Room Action without paying its Cost
 - Check any 2 Unexplored Rooms tiles (but do not look at their Exploration tokens)
 
-
+SELECT @id := id FROM characters WHERE system_name='hacker';
+INSERT INTO character_action_cards (system_name, cost, character_id, interruption, available) VALUES
+('search', 0, @id, false, 'out_of_combat'),
+('search', 0, @id, false, 'out_of_combat'),
+('rest', 0, @id, false, 'out_of_combat'),
+('demolition', 0, @id, false, 'always'),
+('interruption', 0, @id, true, 'always'),
+('recharge', 1, @id, false, 'out_of_combat'),
+('neuralink', 0, @id, false, 'out_of_combat'),
+('bypass', 1, @id, false, 'out_of_combat'),
+('it_work_for_me', 0, @id, false, 'out_of_combat'),
+('master_plan', 0, @id, false, 'out_of_combat');

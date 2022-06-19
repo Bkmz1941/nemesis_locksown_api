@@ -1,54 +1,186 @@
 {
-  "get_items": {
-    "name": "Найти предмет",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "scan_contamination_cards": {
-    "name": "Просканировать карты заражения",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "destroy_closed_door": {
-    "name": "Сломать закрытую дверь",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "break_room": {
-    "name": "Сломать комнату",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "cancel_someone_action": {
-    "name": "Прервать действие",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "cancel_someone_interruption": {
-    "name": "Прервать прерывание",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "fix_up_room": {
-    "name": "Починить комнату",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "discard_all_cards": {
-    "name": "Сбросить все карты",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "retreat_intruder": {
-    "name": "Отогнать монстра",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "close_all_doors": {
-    "name": "Закрыть все двери",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "move_with_someone": {
-    "name": "Совместное перемещение",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "free_use_room_action": {
-    "name": "Бесплатное использование компьютера",
-    "description": "Полное описание действия согласно правилам"
-  },
-  "check_rooms": {
-    "name": "Проверить комнаты",
-    "description": "Полное описание действия согласно правилам"
-  }
+    "get_items": {
+        "name": "Найти предмет",
+        "description": "Reduce the Item Counter by 1. Draw 2 Item cards of the same color as the Room you are in. Pick one and discard the other to the bottom of its deck"
+    },
+    "scan_contamination_cards": {
+        "name": "Просканировать карты заражения",
+        "description": "Scan all Contamination cards in your hand and remove all Uninfected cards. If any of the card were INFECTED, follow the Infection procedure"
+    },
+    "destroy_closed_door": {
+        "name": "Сломать закрытую дверь",
+        "description": "Destroy 1 Closed Door in a corridor connected to thr Room you are in"
+    },
+    "break_room": {
+        "name": "Сломать комнату",
+        "description": "Place a Malfunction marker in the Room you are in"
+    },
+    "cancel_someone_action": {
+        "name": "Прервать действие",
+        "description": "Discard this card to cancel any Action performed by another player in the Room you are in (the other player must still pay the Action Cost)"
+    },
+    "cancel_someone_interruption": {
+        "name": "Прервать прерывание",
+        "description": "Cancel an Interruption Action used by another player in your Room"
+    },
+    "fix_up_room": {
+        "name": "Починить комнату",
+        "description": "Discard a Malfunction marker from the Room you are in"
+    },
+    "discard_all_cards": {
+        "name": "Сбросить все карты",
+        "description": "Choose a Character in the Room you are in with 3 of fewer cards in hand. They discard all cards from their hand"
+    },
+    "retreat_intruder": {
+        "name": "Отогнать монстра",
+        "description": "Discard 1 of Weapons to make an Intruder retreat to a chosen neighboring Room (but not through a Closed Door)"
+    },
+    "close_all_doors": {
+        "name": "Закрыть все двери",
+        "description": "If you are in a Room with a Computer, you may choose any Room and Close all Doors in the Corridors connected to that Room"
+    },
+    "move_with_someone": {
+        "name": "Совместное перемещение",
+        "description": "Move yourself and up to 1 other Character in the Room you are in (they do not have to agree) to a chosen neighboring Room. You may ignore the effect of an Exploration Token. Perform a Noise roll as per normal rules"
+    },
+    "free_use_room_action": {
+        "name": "Бесплатное использование компьютера",
+        "description": "If you are in a White or Red Room, use its Room Action without paying its Cost"
+    },
+    "check_rooms": {
+        "name": "Проверить комнаты",
+        "description": "Check any 2 Unexplored Room tiles (but do not look at their Exploration tokens)"
+    },
+    "discard_slime": {
+        "name": "Очиститься",
+        "description": "Discard a Slime marker"
+    },
+    "replace_contamination_with_cards": {
+        "name": "Адаптироваться",
+        "description": "Discard 1 Contamination card from your hand to draw 2 cards from your deck"
+    },
+    "discard_noise_a_corridor": {
+        "name": "Проверить коридор",
+        "description": "Discard a Noise marker from a chosen Corridor connected to the Room you are in"
+    },
+    "place_noise_a_corridor": {
+        "name": "Крикнуть",
+        "description": "Place a Noise marker in a Corridor connected to the Room you are in"
+    },
+    "ignore_in_darkness": {
+        "name": "Вглядеться",
+        "description": "Discard this card during the Event Phase to ignore the \"in Darkness\" effect of an Event for you"
+    },
+    "ignore_surprise_attack": {
+        "name": "Сконцентрироваться",
+        "description": "Discard this card during a Surprise Attack (after drawing an Attack card) to ignore its effect"
+    },
+    "be_hidden": {
+        "name": "Затаиться",
+        "description": "Discard this card when wan Intruder attacks you (but before drawing an Attack card) and there is another Character in the Room you are in.\nThe Intruder attacks this character instead of you"
+    },
+    "be_quiet": {
+        "name": "Замедлиться",
+        "description": "[In Darkness] Discard this card when you have to perform a Noise roll during the Intruder bag development step of the Event Phase.\nYou do not have to perform this roll"
+    },
+    "get_ammo": {
+        "name": "Зарядить оружие",
+        "description": "Use in a Section with Power to add 2 AMMO to your Energy Weapon"
+    },
+    "use_without_computer_with_power": {
+        "name": "Подключиться через внешнюю сеть",
+        "description": "If you are in a Room without a Computer and in a Section with Power, use a Computer Action"
+    },
+    "use_with_computer_without_power": {
+        "name": "Подключиться через внутреннюю сеть",
+        "description": "If you are in a Room with a Computer and in a Section without Power, use a Computer Action"
+    },
+    "use_with_computer_with_power": {
+        "name": "Подключиться к серверу",
+        "description": "If you are in a Room with a Computer and in Section with Power, you may perform any number of Actions from the Computer Action card.\nDiscard the Computer Action card afterwards"
+    },
+    "flip_power_of_section": {
+        "name": "Сменить напряжение",
+        "description": "Flip a Power token of the Section you are in"
+    },
+    "repair_use_with_computer_with_power": {
+        "name": "Починить",
+        "description": "Discard a Malfunction marker from the Room you are in"
+    },
+    "free_use_room_action_with_computer": {
+        "name": "Использовать компьютер",
+        "description": "If you are in a Room with a Computer, you can use its Room Action without paying its Cost"
+    },
+    "check_two_unexplored_rooms": {
+        "name": "Изучить карту",
+        "description": "Check any 2 Unexplored Rooms tiles (but do not look at their Exploration tokens)"
+    },
+    "free_use_room_action_white_green": {
+        "name": "Изучить карту",
+        "description": "If you are in a White or Green Room, use its Room Action without paying its Cost"
+    },
+    "get_knowledge": {
+        "name": "Изучить",
+        "description": "Reduce the Item counter by 1 and gain 1 Knowledge"
+    },
+    "attack_with_probe_arm": {
+        "name": "Атаковать протезом",
+        "description": "Discard 1 USE from your Probe Arm. Choose 1 Intruder in the Room you are in. It suffers 1 Injury plus 1 for each 2 Knowledge you have"
+    },
+    "kw4_view_events_cards": {
+        "name": "Изучить обстановку",
+        "description": "Draw 2 event cards, then return 1 of them to the top of the desk and the other to the bottom"
+    },
+    "kw6_view_intruder_attack_cards": {
+        "name": "Откалибровать протез",
+        "description": "Draw 2 Intruder Attack cards, then return 1 of then to the top of the deck and the other to the bottom"
+    },
+    "ignore_attack_get_slime": {
+        "name": "Распылить феромоны",
+        "description": "Discard an Egg or a Carcass after an Intruder Attack to ignore that Attack.\nAll Characters in the Room you are in (including yourself) gain a Slime marker.\n[Knowledge 6]: Instead of ignoring this Attack, you may choose another Character in the Room you are in to become the target of this Attack"
+    },
+    "call_elevator": {
+        "name": "Вызвать лифт",
+        "description": "If you are in an Elevator Room, call the Elevator and you it, even if there is no Power in the Elevator"
+    },
+    "open_close_door": {
+        "name": "Замкнуть провода",
+        "description": "Open/Close 1 Door in a Corridor connected to the Room you are in"
+    },
+    "put_of_fire": {
+        "name": "Потушить пожар",
+        "description": "Discard a Fire marker from the Room you are in"
+    },
+    "free_use_room_action_white_yellow": {
+        "name": "Отладить датчик",
+        "description": "If you are in a White or Yellow Room, use its Room Action without paying its Cost"
+    },
+    "reduce_item_craft_yellow": {
+        "name": "Собрать из мусора",
+        "description": "If you are in a Yellow Room, reduce the Item Counter by 1 and take the Flamethrower, the Enviro-Suit or the Taser"
+    },
+    "use_room_action_with_malfunction": {
+        "name": "Найти способ",
+        "description": "Use a Room Action even if there is a Malfunction marker"
+    },
+    "attack": {
+        "name": "Безрассудная атака",
+        "description": "Get 1 Contamination card and deal 2 Injuries to a chosen Intruder in the Room you are in.\nCheck the Injury effect. If this Intruder is still in the Room you are in, it attacks you immediately"
+    },
+    "get_cards_as_wounds": {
+        "name": "Успокоиться",
+        "description": "Draw 1 card for each Serious Wound you have"
+    },
+    "dress_serious_wounds_of_item": {
+        "name": "Закрыть раны",
+        "description": "Discard 1 of your items and dress 1 of your Serious Wounds"
+    },
+    "use_tech_corridor": {
+        "name": "Залезть в вентиляцию",
+        "description": "If you are in a Room with a Technical Corridors Entrance, you may move to a chosen explored Room wi a technical Corridors Entrance.\nDraw and resolve an Attack card (treat it as an Attack from an Adult Intruder in Darkness)"
+    },
+    "escape": {
+        "name": "Отвлечь",
+        "description": "Discard 1 of your Items. You and/or 1 chosen Character in your Room may escape the Room (moving to the same Room) without triggering an Intruder Attack"
+    }
 }

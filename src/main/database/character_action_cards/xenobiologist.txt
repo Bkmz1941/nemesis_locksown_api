@@ -77,3 +77,17 @@ All Characters in the Room you are in (including yourself) gain a Slime marker.
     available: "OUT_IN_COMBAT"
 }
 - Discard a Malfunction marker from the Room you are in
+
+
+SELECT @id := id FROM characters WHERE system_name='xenobiologist';
+INSERT INTO character_action_cards (system_name, cost, character_id, interruption, available) VALUES
+('search', 0, @id, false, 'out_of_combat'),
+('search', 0, @id, false, 'out_of_combat'),
+('pushed_analysis', 0, @id, false, 'out_of_combat'),
+('demolition', 0, @id, false, 'always'),
+('interruption', 0, @id, true, 'always'),
+('repairs', 1, @id, false, 'out_of_combat'),
+('workspace_plan', 0, @id, false, 'out_of_combat'),
+('vivisection', 0, @id, false, 'in_combat'),
+('field_experience', 0, @id, false, 'always'),
+('pheromones', 0, @id, false, 'in_combat');

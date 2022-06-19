@@ -1,9 +1,8 @@
 package core.http.resources;
 
-import entities.charcter.CharacterActionAvailable;
-import entities.charcter.CharacterActionCard;
-import entities.charcter.CharacterActionCardValue;
-import entities.charcter.CharacterBasicAction;
+import models.charcter.CharacterActionAvailable;
+import models.charcter.CharacterActionCard;
+import models.charcter.CharacterActionCardValue;
 
 import java.util.Comparator;
 import java.util.Set;

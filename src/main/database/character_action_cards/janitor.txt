@@ -75,4 +75,15 @@
 - Use a Room Action even if there is a Malfunction marker
 - If you are in a Room with a Computer and in a Section without Power, use a Computer Action
 
-
+SELECT @id := id FROM characters WHERE system_name='janitor';
+INSERT INTO character_action_cards (system_name, cost, character_id, interruption, available) VALUES
+('search', 0, @id, false, 'out_of_combat'),
+('search', 0, @id, false, 'out_of_combat'),
+('rest', 0, @id, false, 'out_of_combat'),
+('demolition', 0, @id, false, 'always'),
+('interruption', 0, @id, true, 'always'),
+('emergency_key', 0, @id, false, 'out_of_combat'),
+('clean_up', 0, @id, false, 'out_of_combat'),
+('maintenance_plan', 1, @id, false, 'out_of_combat'),
+('jury_rigging', 2, @id, false, 'out_of_combat'),
+('it_should_work', 1, @id, false, 'out_of_combat');

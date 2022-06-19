@@ -1,8 +1,6 @@
-package entities.charcter;
+package models.charcter;
 
-import com.sun.source.tree.Tree;
 import core.http.server.HttpServer;
-import entities.room.RoomAction;
 import helpers.FileWithTranslate;
 
 import java.util.Comparator;
@@ -46,7 +44,7 @@ public class CharacterActionCard {
 
     public String getFullImageLink() {
         try {
-            return HttpServer.port + ":/" + HttpServer.getInstance().getAddress() + "/resources/images/characters/action_cards/" + this.ownerSystemName + "_" + this.systemName + ".jpg";
+            return HttpServer.port + ":/" + HttpServer.getInstance().getAddress() + "/resources/images/characters/action_cards/" + this.ownerSystemName + "_" + this.systemName + ".png";
         } catch (Exception ignore) {
             return "";
         }

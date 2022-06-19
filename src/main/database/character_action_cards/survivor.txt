@@ -63,7 +63,7 @@ Check the Injury effect. If this Intruder is still in the Room you are in, it at
 9. VENTS
 {
     cost: 1,
-    available: "IN_COMBAT"
+    available: "OUT_IN_COMBAT"
 }
 - If you are in a Room with a Technical Corridors Entrance, you may move to a chosen explored Room wi a technical Corridors Entrance.
 Draw and resolve an Attack card (treat it as an Attack from an Adult Intruder in Darkness)
@@ -74,3 +74,16 @@ Draw and resolve an Attack card (treat it as an Attack from an Adult Intruder in
     available: "IN_COMBAT"
 }
 - Discard 1 of your Items. You and/or 1 chosen Character in your Room may escape the Room (moving to the same Room) without triggering an Intruder Attack
+
+SELECT @id := id FROM characters WHERE system_name='survivor';
+INSERT INTO character_action_cards (system_name, cost, character_id, interruption, available) VALUES
+('search', 0, @id, false, 'out_of_combat'),
+('search', 0, @id, false, 'out_of_combat'),
+('rest', 0, @id, false, 'out_of_combat'),
+('demolition', 0, @id, false, 'always'),
+('interruption', 0, @id, true, 'always'),
+('repairs', 1, @id, false, 'out_of_combat'),
+('desperate_attack', 0, @id, false, 'in_combat'),
+('obstinate', 0, @id, false, 'out_of_combat'),
+('vents', 1, @id, false, 'out_of_combat'),
+('distraction', 0, @id, false, 'in_combat');

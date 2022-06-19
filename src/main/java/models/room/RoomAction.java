@@ -1,12 +1,6 @@
-package entities.room;
+package models.room;
 
-import com.google.gson.Gson;
-import helpers.FileHelper;
 import helpers.FileWithTranslate;
-
-import java.io.File;
-import java.nio.file.Files;
-import java.util.HashMap;
 
 public class RoomAction {
     private final int id;

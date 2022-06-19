@@ -3,7 +3,7 @@ package core.http.server.controllers;
 import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import core.http.resources.CharacterResource;
-import entities.charcter.Character;
+import models.charcter.Character;
 import services.dao.CharacterDAO;
 
 import java.util.Comparator;

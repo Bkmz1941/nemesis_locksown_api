@@ -1,29 +1,101 @@
 {
-  "search": {
-    "name": "Поиск"
-  },
-  "rest": {
-    "name": "Отдых"
-  },
-  "demolition": {
-    "name": "Разрушение"
-  },
-  "interruption": {
-    "name": "Прерывание"
-  },
-  "repairs": {
-    "name": "Ремонт"
-  },
-  "stun": {
-    "name": "Оглушение"
-  },
-  "quarantine": {
-    "name": "Объявление карантина"
-  },
-  "facility_tour": {
-    "name": "Экскурсия по объекту "
-  },
-  "defense_plan": {
-    "name": "План защиты"
-  }
+    "search": {
+        "name": "Поиск"
+    },
+    "rest": {
+        "name": "Отдых"
+    },
+    "demolition": {
+        "name": "Разрушение"
+    },
+    "interruption": {
+        "name": "Прерывание"
+    },
+    "repairs": {
+        "name": "Ремонт"
+    },
+    "stun": {
+        "name": "Оглушение"
+    },
+    "quarantine": {
+        "name": "Объявление карантина"
+    },
+    "facility_tour": {
+        "name": "Экскурсия по объекту "
+    },
+    "defense_plan": {
+        "name": "План защиты"
+    },
+    "recharge": {
+        "name": "Подзарядка"
+    },
+    "neuralink": {
+        "name": "Нейросеть"
+    },
+    "bypass": {
+        "name": "Взлом"
+    },
+    "it_work_for_me": {
+        "name": "Оно заработает"
+    },
+    "master_plan": {
+        "name": "План комплекса"
+    },
+    "emergency_key": {
+        "name": "Аварийный ключ"
+    },
+    "clean_up": {
+        "name": "Уборка"
+    },
+    "maintenance_plan": {
+        "name": "План техобслуживания"
+    },
+    "jury_rigging": {
+        "name": "Сборка"
+    },
+    "it_should_work": {
+        "name": "Должно работать"
+    },
+    "weird_metabolism": {
+        "name": "Странный метаболизм"
+    },
+    "sensitive_heading": {
+        "name": "Исключительный слух"
+    },
+    "feel_of_the_dark": {
+        "name": "Обостренные чувства"
+    },
+    "basic_repairs": {
+        "name": "Простой ремонт"
+    },
+    "inconspicuous": {
+        "name": "Незаметность"
+    },
+    "desperate_attack": {
+        "name": "Отчаянная атака"
+    },
+    "obstinate": {
+        "name": "Упорство"
+    },
+    "vents": {
+        "name": "Вентиляция?"
+    },
+    "distraction": {
+        "name": "Отвлечение"
+    },
+    "pushed_analysis": {
+        "name": "Ускоренный анализ"
+    },
+    "workspace_plan": {
+        "name": "План комплекса"
+    },
+    "vivisection": {
+        "name": "Отсечение"
+    },
+    "field_experience": {
+        "name": "Боевые испытания"
+    },
+    "pheromones": {
+        "name": "Феромоны"
+    }
 }

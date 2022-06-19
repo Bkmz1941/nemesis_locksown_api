@@ -1,9 +1,6 @@
-package entities.charcter;
+package models.charcter;
 
-import core.http.server.HttpServer;
 import helpers.FileWithTranslate;
-
-import java.io.IOException;
 
 public class CharacterActionCardValue {
     private final int id;

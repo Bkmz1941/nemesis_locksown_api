@@ -1,18 +1,12 @@
 package core.http.server.controllers;
 
-import com.google.gson.Gson;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import entities.room.Room;
-import org.apache.commons.lang3.StringEscapeUtils;
-import services.dao.RoomDAO;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 public class Controller implements HttpHandler {

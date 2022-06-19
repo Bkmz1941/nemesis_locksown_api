@@ -1,12 +1,7 @@
-package entities.room;
+package models.room;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import helpers.FileHelper;
 import helpers.FileWithTranslate;
 
-import java.io.*;
-import java.nio.file.Files;
 import java.util.*;
 
 public class Room {

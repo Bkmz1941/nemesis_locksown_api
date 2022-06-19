@@ -1,7 +1,7 @@
 package core.http.resources;
 
-import entities.charcter.CharacterBasicAction;
-import entities.charcter.CharacterActionAvailable;
+import models.charcter.CharacterBasicAction;
+import models.charcter.CharacterActionAvailable;
 
 public class CharacterBasicActionsResource {
     private final int id;

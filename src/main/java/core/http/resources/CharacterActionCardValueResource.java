@@ -1,12 +1,6 @@
 package core.http.resources;
 
-import entities.charcter.CharacterActionAvailable;
-import entities.charcter.CharacterActionCard;
-import entities.charcter.CharacterActionCardValue;
-
-import java.util.Comparator;
-import java.util.Set;
-import java.util.TreeSet;
+import models.charcter.CharacterActionCardValue;
 
 public class CharacterActionCardValueResource {
     private final int id;

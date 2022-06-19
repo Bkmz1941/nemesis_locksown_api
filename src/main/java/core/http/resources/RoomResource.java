@@ -1,12 +1,8 @@
 package core.http.resources;
 
-import entities.room.Room;
-import entities.room.RoomAction;
-import entities.room.RoomGroup;
-import entities.room.RoomType;
-
-import java.util.Comparator;
-import java.util.TreeSet;
+import models.room.Room;
+import models.room.RoomGroup;
+import models.room.RoomType;
 
 public class RoomResource {
     private final int id;
