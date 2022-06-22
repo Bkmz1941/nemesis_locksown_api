@@ -1,0 +1,36 @@
+CREATE TABLE items {
+     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+     system_name VARCHAR(255),
+     type ENUM('medicine', 'weapon', 'technical', 'character'),
+     available ENUM('out_in_combat', 'in_combat', 'always'),
+     weight INT,
+     once_use BOOLEAN,
+     uses INT,
+     crafting_type ENUM('medicine', 'fire', 'electricity', 'material', 'frame'),
+     is_crafting BOOLEAN,
+     cost INT
+}
+
+CREATE TABLE item_values (
+     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+     system_name VARCHAR(255),
+     item_id int,
+     FOREIGN KEY (item_id) REFERENCES items (id) ON DELETE CASCADE,
+     INDEX (item_id)
+);
+
+
+SMG {
+    system_name: 'smg',
+    available: 'out_in_combat',
+    weight: 1,
+    system_type: 'energy_weapon',
+    starting_item: true,
+    character_starting_item: 'sentry',
+    once_use: false,
+    ammo: 5,
+    crafting_type: NULL,
+    is_crafting: false
+    cost: 0,
+    type: NULL
+}

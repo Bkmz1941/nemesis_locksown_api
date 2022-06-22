@@ -9,7 +9,7 @@ CREATE TABLE character_action_cards (
     FOREIGN KEY (character_id) REFERENCES characters (id) ON DELETE CASCADE,
     INDEX (character_id)
 );
-ALTER TABLE character_action_cards ADD COLUMN available ENUM('in_combat', 'out_of_combat', 'always');
+ALTER TABLE items ADD COLUMN mark VARCHAR(255);
 
 CREATE TABLE character_action_card_values (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
