@@ -1,4 +1,4 @@
-package models.charcter;
+package models.characters;
 
 import helpers.FileWithTranslate;
 

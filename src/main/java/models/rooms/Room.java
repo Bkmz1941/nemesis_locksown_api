@@ -1,4 +1,4 @@
-package models.room;
+package models.rooms;
 
 import helpers.FileWithTranslate;
 

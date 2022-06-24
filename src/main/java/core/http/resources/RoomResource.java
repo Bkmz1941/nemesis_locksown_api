@@ -1,8 +1,8 @@
 package core.http.resources;
 
-import models.room.Room;
-import models.room.RoomGroup;
-import models.room.RoomType;
+import models.rooms.Room;
+import models.rooms.RoomGroup;
+import models.rooms.RoomType;
 
 public class RoomResource {
     private final int id;

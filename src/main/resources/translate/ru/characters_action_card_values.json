@@ -147,7 +147,7 @@
         "name": "Замкнуть провода",
         "description": "Open/Close 1 Door in a Corridor connected to the Room you are in"
     },
-    "put_of_fire": {
+    "put_out_fire": {
         "name": "Потушить пожар",
         "description": "Discard a Fire marker from the Room you are in"
     },

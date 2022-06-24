@@ -1,7 +1,7 @@
 package core.http.resources;
 
-import models.charcter.Character;
-import models.charcter.CharacterColor;
+import models.characters.Character;
+import models.characters.CharacterColor;
 
 import java.io.IOException;
 

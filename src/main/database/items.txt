@@ -19,6 +19,11 @@ CREATE TABLE item_values (
      INDEX (item_id)
 );
 
+START TRANSACTION;
+INSERT INTO items (system_name, type, available, weight, once_use, uses, crafting_type, is_crafting, cost, mark) VALUES
+('enviro-suit', 'character', 'always', 1, false, NULL, NULL, true, 1, 'protective_suit');
+COMMIT;
+
 
 SMG {
     system_name: 'smg',

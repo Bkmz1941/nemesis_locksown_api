@@ -1,6 +1,6 @@
 package core.http.resources;
 
-import models.charcter.CharacterActionCardValue;
+import models.characters.CharacterActionCardValue;
 
 public class CharacterActionCardValueResource {
     private final int id;

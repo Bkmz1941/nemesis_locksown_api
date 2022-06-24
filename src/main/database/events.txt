@@ -1,0 +1,47 @@
+CREATE TABLE events (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    system_name VARCHAR(255),
+    intruder_idx JSON,
+    number int,
+    once_use boolean,
+    darkness_effect boolean
+);
+
+SET @larva := (SELECT id FROM intruder_types WHERE system_name='larva');
+SET @creeper := (SELECT id FROM intruder_types WHERE system_name='creeper');
+SET @adult := (SELECT id FROM intruder_types WHERE system_name='adult');
+SET @breeder := (SELECT id FROM intruder_types WHERE system_name='breeder');
+SET @queen := (SELECT id FROM intruder_types WHERE system_name='queen');
+
+SET @intruder_idx := JSON_ARRAY(@larva, @creeper);
+
+INSERT INTO events (system_name, intruder_idx, number, once_use, darkness_effect) VALUES
+('power_surge', JSON_ARRAY(@adult, @queen), 2, false, false),
+('consuming_fire', JSON_ARRAY(@creeper, @adult, @queen), 2, false, false),
+('fire_in_hole', JSON_ARRAY(@creeper, @adult), 1, false, false),
+('kickstopper', JSON_ARRAY(@adult, @breeder, @queen), 2, true, false),
+('that_hot', JSON_ARRAY(@adult, @breeder, @queen), 1, true, false),
+('short_circuit', JSON_ARRAY(@adult, @breeder, @queen), 4, true, false),
+('blue_screen', JSON_ARRAY(@adult, @breeder, @queen), 3, true, false),
+('panic', JSON_ARRAY(@adult, @breeder), 4, false, true),
+('noise_in_corridors', JSON_ARRAY(@adult, @breeder), 3, false, true),
+('hatching', JSON_ARRAY(@adult, @breeder), 2, false, true),
+('scent_of_blood', JSON_ARRAY(@creeper, @adult), 4, false, true),
+('damage', JSON_ARRAY(@creeper, @adult), 3, false, true),
+('nest', JSON_ARRAY(@creeper, @breeder, @queen), 1, false, true),
+('egg_protection', JSON_ARRAY(@breeder, @queen), 4, false, true),
+('lurking', JSON_ARRAY(@larva, @creeper), 2, false, true);
+
+CREATE TABLE intruder_types (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    system_name VARCHAR(255)
+);
+
+ALTER TABLE intruder_types MODIFY COLUMN id INT AUTO_INCREMENT NOT NULL;
+
+INSERT INTO intruder_types (system_name) VALUES
+('larva'),
+('creeper'),
+('adult'),
+('breeder'),
+('queen');

@@ -3,7 +3,7 @@ package core.http.server.controllers;
 import com.google.gson.Gson;
 import com.sun.net.httpserver.HttpExchange;
 import core.http.resources.RoomResource;
-import models.room.Room;
+import models.rooms.Room;
 import services.dao.RoomDAO;
 
 import java.util.Comparator;

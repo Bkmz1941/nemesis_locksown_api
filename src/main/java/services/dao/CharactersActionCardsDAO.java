@@ -1,8 +1,8 @@
 package services.dao;
 
 import core.database.DatabaseConnection;
-import models.charcter.CharacterActionCard;
-import models.charcter.CharacterActionCardValue;
+import models.characters.CharacterActionCard;
+import models.characters.CharacterActionCardValue;
 
 import java.sql.ResultSet;
 import java.util.Comparator;

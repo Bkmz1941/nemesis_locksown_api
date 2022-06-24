@@ -1,6 +1,6 @@
 package core.http.resources;
 
-import models.room.RoomAction;
+import models.rooms.RoomAction;
 
 public class RoomActionResource {
     private final int id;
