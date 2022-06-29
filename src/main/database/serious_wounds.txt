@@ -1,0 +1,14 @@
+CREATE TABLE serious_wounds (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    system_name VARCHAR(255)
+);
+
+INSERT INTO serious_wounds (system_name) VALUES
+('body'),
+('leg'),
+('blending'),
+('hand'),
+('arm'),
+('eyes'),
+('guts'),
+('knee');

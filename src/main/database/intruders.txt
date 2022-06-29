@@ -1,0 +1,35 @@
+CREATE TABLE intruder_attacks (
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    system_name VARCHAR(255),
+    intruder_idx JSON,
+    number int,
+    darkness_effect boolean
+);
+
+SET @larva := (SELECT id FROM intruder_types WHERE system_name='larva');
+SET @creeper := (SELECT id FROM intruder_types WHERE system_name='creeper');
+SET @adult := (SELECT id FROM intruder_types WHERE system_name='adult');
+SET @breeder := (SELECT id FROM intruder_types WHERE system_name='breeder');
+SET @queen := (SELECT id FROM intruder_types WHERE system_name='queen');
+
+INSERT INTO events (system_name, intruder_idx, number, darkness_effect) VALUES
+('cut', JSON_ARRAY(@creeper, @adult, @breeder, @queen), 2, true),
+('cut', JSON_ARRAY(@creeper, @adult, @breeder, @queen), 3, true),
+('cut', JSON_ARRAY(@creeper, @adult, @breeder, @queen), 4, true),
+('cut', JSON_ARRAY(@creeper, @adult, @breeder, @queen), 5, true),
+('cut', JSON_ARRAY(@creeper, @adult, @breeder, @queen), -1, true),
+('blood_chase', JSON_ARRAY(@creeper, @adult, @breeder, @queen), 2, false),
+('blood_chase', JSON_ARRAY(@creeper, @adult, @breeder, @queen), 4, false),
+('blood_chase', JSON_ARRAY(@creeper, @adult, @breeder, @queen), 5, false),
+('perched_in_the_dark', JSON_ARRAY(@adult, @breeder, @queen), -1, true),
+('perched_in_the_dark', JSON_ARRAY(@adult, @breeder, @queen), 4, true),
+('perched_in_the_dark', JSON_ARRAY(@adult, @breeder, @queen), 5, true),
+('perched_in_the_dark', JSON_ARRAY(@adult, @breeder, @queen), 5, true),
+('perched_in_the_dark', JSON_ARRAY(@adult, @breeder, @queen), 2, true),
+('blood_rage', JSON_ARRAY(@breeder, @queen), 3, false),
+('blood_rage', JSON_ARRAY(@breeder, @queen), 5, false),
+('piercing_the_heart', JSON_ARRAY(@queen), 3, true),
+('piercing_the_heart', JSON_ARRAY(@queen), 5, true),
+('infecting_the_host', JSON_ARRAY(@creeper, @queen), 5, true),
+('evolve', JSON_ARRAY(@creeper, @queen), 4, true),
+('evolve', JSON_ARRAY(@creeper, @queen), -1, true);
